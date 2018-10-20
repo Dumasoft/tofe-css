@@ -1,0 +1,146 @@
+@import '_variables'
+@import '_mixins'
+
+.contenedor, .contenedor-fluido
+    margin: 0 auto
+
+.contenedor-fluido
+    padding: 0 2rem
+
+.fila
+    box-sizing: border-box
+    display: -webkit-box
+    display: -ms-flexbox
+    display: flex
+    -webkit-box-flex: 0
+    -ms-flex: 0 1 auto
+    flex: 0 1 auto
+    -webkit-box-orient: horizontal
+    -webkit-box-direction: normal
+    -ms-flex-direction: row
+    flex-direction: row
+    -ms-flex-wrap: wrap
+    flex-wrap: wrap
+    &.invertir
+        -webkit-box-orient: horizontal
+        -webkit-box-direction: reverse
+        -ms-flex-direction: row-reverse
+
+@each $clave, $valor in $queries
+    @if $valor != 0
+        @media only screen and (min-width: $valor + rem)
+            +bucle_cuadriculas($maximo_cuadriculas, $clave)
+    @else
+        +bucle_cuadriculas($maximo_cuadriculas, $clave)
+
+@each $clave, $valor in $queries
+    @if $valor != 0
+        @media only screen and (min-width: $valor + rem)
+            .empezar-#{$clave}
+                -webkit-box-pack: start
+                -ms-flex-pack: start
+                justify-content: flex-start
+                text-align: start
+            .centrar-#{$clave}
+                -webkit-box-pack: center
+                -ms-flex-pack: center
+                justify-content: center
+                text-align: center
+            .fin-#{$clave}
+                -webkit-box-pack: end
+                -ms-flex-pack: end
+                justify-content: flex-end
+                text-align: end
+            .arriba-#{$clave}
+                -webkit-box-align: start
+                -ms-flex-align: start
+                align-items: flex-start
+            .medio-#{$clave}
+                -webkit-box-align: center
+                -ms-flex-align: center
+                align-items: center
+            .abajo-#{$clave}
+                -webkit-box-align: end
+                -ms-flex-align: end
+                align-items: flex-end
+            .alrededor-#{$clave}
+                -ms-flex-pack: distribute
+                justify-content: space-around
+            .entre-#{$clave}
+                -webkit-box-pack: justify
+                -ms-flex-pack: justify
+                justify-content: space-between
+            .primero-#{$clave}
+                -webkit-box-ordinal-group: 0
+                -ms-flex-order: -1
+                order: -1
+            .ultimo-#{$clave}
+                -webkit-box-ordinal-group: 2
+                -ms-flex-order: 1
+                order: 1
+            .#{$clave}
+                -webkit-box-flex: 1
+                -ms-flex-positive: 1
+                flex-grow: 1
+                -ms-flex-preferred-size: 0
+                flex-basis: 0
+                max-width: 100%
+
+    @else
+        .empezar-#{$clave}
+            -webkit-box-pack: start
+            -ms-flex-pack: start
+            justify-content: flex-start
+            text-align: start
+        .centrar-#{$clave}
+            -webkit-box-pack: center
+            -ms-flex-pack: center
+            justify-content: center
+            text-align: center
+        .fin-#{$clave}
+            -webkit-box-pack: end
+            -ms-flex-pack: end
+            justify-content: flex-end
+            text-align: end
+        .arriba-#{$clave}
+            -webkit-box-align: start
+            -ms-flex-align: start
+            align-items: flex-start
+        .medio-#{$clave}
+            -webkit-box-align: center
+            -ms-flex-align: center
+            align-items: center
+        .abajo-#{$clave}
+            -webkit-box-align: end
+            -ms-flex-align: end
+            align-items: flex-end
+        .alrededor-#{$clave}
+            -ms-flex-pack: distribute
+            justify-content: space-around
+        .entre-#{$clave}
+            -webkit-box-pack: justify
+            -ms-flex-pack: justify
+            justify-content: space-between
+        .primero-#{$clave}
+            -webkit-box-ordinal-group: 0
+            -ms-flex-order: -1
+            order: -1
+        .ultimo-#{$clave}
+            -webkit-box-ordinal-group: 2
+            -ms-flex-order: 1
+            order: 1
+        .#{$clave}
+            -webkit-box-flex: 1
+            -ms-flex-positive: 1
+            flex-grow: 1
+            -ms-flex-preferred-size: 0
+            flex-basis: 0
+            max-width: 100%
+
+@media only screen and (max-width: 48em)
+    .ocultar-mo
+        display: none
+
+@media (max-width: 978px)
+    .ocultar-ta
+        display: none
