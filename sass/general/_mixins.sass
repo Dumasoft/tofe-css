@@ -1,0 +1,19 @@
+=grilla($nombre, $tam)
+    .#{$nombre}
+        -ms-flex-preferred-size: $tam
+        flex-basis: $tam
+        width: $tam
+
+=bucle_cuadriculas($maximo_cuadriculas, $clave)
+    @for $i from 1 through $maximo_cuadriculas
+        $porcentaje: 100% / $i
+        +grilla(#{$clave}-#{$i},  $porcentaje)
+        .#{$clave}-#{$i}, .#{$clave}-#{$i}-vacio
+            box-sizing: border-box
+            -webkit-box-flex: 0
+            -ms-flex: 0 0 auto
+            flex: 0 0 auto
+            padding-right: 0.5rem
+            padding-left: 0.5rem
+        .#{$clave}-#{$i}-vacio
+            margin-left: $porcentaje
