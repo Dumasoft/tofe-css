@@ -1,0 +1,11 @@
+@import '../utiles/variables'
+@import '../utiles/mixins'
+
+.alerta
+    width: 100%
+    padding: 10px
+    box-sizing: border-box
+    margin: 10px 0
+
+@each $clave, $valor in $colores
+    +fondo_color_borde($clave, map_get($valor, fondo), map_get($valor, color_texto), $porcentaje_borde_alerta)

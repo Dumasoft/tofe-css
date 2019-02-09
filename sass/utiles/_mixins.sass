@@ -17,3 +17,10 @@
             padding-left: 0.5rem
         .#{$clave}-#{$i}-vacio
             margin-left: $porcentaje
+
+=fondo_color_borde($nombre, $fondo, $color, $porcentaje_borde)
+    .alerta
+        &.#{$nombre}
+            background-color: $fondo
+            color: $color
+            border: 1px solid darken($fondo, $porcentaje_borde)
