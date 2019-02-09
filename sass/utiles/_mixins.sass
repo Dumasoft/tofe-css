@@ -18,9 +18,12 @@
         .#{$clave}-#{$i}-vacio
             margin-left: $porcentaje
 
-=fondo_color_borde($nombre, $fondo, $color, $porcentaje_borde)
+=fondo_color_borde($nombre, $fondo, $color, $porcentaje_borde, $fondo_icono)
     .alerta
         &.#{$nombre}
             background-color: $fondo
             color: $color
             border: 1px solid darken($fondo, $porcentaje_borde)
+            & .icono
+                background-color: $fondo_icono
+                border-right: darken($fondo, $porcentaje_borde)
