@@ -10,7 +10,7 @@ var sourcemaps = require('gulp-sourcemaps');
 var postcss = require('gulp-postcss');
 var origen = 'sass/tofe.sass';
 var destino = 'dist/css';
-var destino_docs = 'docs/';
+var destino_docs = 'docs/static/css';
 var opcionesPrefix = {
     browsers: ['last 2 versions']
 };
