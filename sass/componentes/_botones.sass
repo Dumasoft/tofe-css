@@ -1,0 +1,32 @@
+@import '../utiles/colores'
+@import '../utiles/mixins'
+
+button
+    &.boton
+        padding: 10px
+        display: flex
+        align-items: center
+        -webkit-border-radius: 0
+        -moz-border-radius: 0
+        border-radius: 0
+        border: 0
+        box-sizing: border-box
+        cursor: pointer
+        -moz-transition: all 0.5s ease-in
+        -webkit-transition: all 0.5s ease-in
+        -o-transition: all 0.5s ease-in
+        transition: all 0.5s ease-in
+        &.centrar-texto
+            justify-content: center
+        & i
+            margin-right: 10px
+            margin-left: 10px
+        &:hover, &:active, &:focus
+            -moz-transition: all 0.5s ease-in
+            -webkit-transition: all 0.5s ease-in
+            -o-transition: all 0.5s ease-in
+            transition: all 0.5s ease-in
+
+@each $clave, $valor in $colores
+    +crear_boton($clave, nth($valor, 2), nth($valor, 1), bold)
+    +crear_boton_con_borde($clave, nth($valor, 2), nth($valor, 3), nth($valor, 1))
