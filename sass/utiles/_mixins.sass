@@ -27,3 +27,24 @@
             & .icono
                 background-color: $fondo_icono
                 border-right: darken($fondo, $porcentaje_borde)
+
+=crear_boton($nombre, $fondo, $color, $grosor)
+    .boton
+        &.boton-#{$nombre}
+            background-color: $fondo
+            border: 0
+            color: $color
+            font-weight: $grosor
+            &:hover, &:active, &:focus
+                background-color: darken($fondo, 10%)
+
+=crear_boton_con_borde($nombre, $fondo, $borde, $color)
+    .boton
+        &.boton-#{$nombre}-borde
+            background-color: $fondo
+            border: 1px solid $borde
+            font-weight: 100
+            color: $color
+            &:hover, &:active, &:focus
+                border: 1px solid $borde
+                background-color: darken($fondo, 30%)
