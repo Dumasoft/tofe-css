@@ -10,9 +10,10 @@ var sourcemaps = require('gulp-sourcemaps');
 var postcss = require('gulp-postcss');
 var origen = 'sass/tofe.sass';
 var destino = 'dist/css';
+var destino_docs = 'docs/';
 var opcionesPrefix = {
     browsers: ['last 2 versions']
-}
+};
 
 function estilo() {
     return (
@@ -25,6 +26,8 @@ function estilo() {
             .pipe(postcss([prefix(opcionesPrefix), cssmin()]))
             .pipe(rename({suffix: '.min'}))
             .pipe(gulp.dest(destino))
+            .pipe(postcss([prefix(opcionesPrefix), cssmin()]))
+            .pipe(gulp.dest(destino_docs))
     );
 }
 

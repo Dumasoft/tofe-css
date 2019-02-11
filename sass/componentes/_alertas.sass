@@ -13,5 +13,5 @@
         margin-right: 10px
         box-sizing: border-box
 
-@each $clave, $valor in $colores_alertas
-    +fondo_color_borde($clave, map_get($valor, fondo), map_get($valor, color_texto), $porcentaje_borde_alerta, map_get($valor, fondo_icono))
+@each $clave, $valor in $colores
+    +fondo_color_borde($clave, nth($valor, 1), nth($valor, 2), $porcentaje_borde_alerta, nth($valor, 3))
