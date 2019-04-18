@@ -1,5 +1,5 @@
 var gulp = require('gulp');
-var sass = require('gulp-sass');
+var sass = require('gulp-dart-sass');
 var rename = require('gulp-rename');
 var cssmin = require('cssnano');
 var prefix = require('autoprefixer');
