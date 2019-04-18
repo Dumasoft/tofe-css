@@ -6,7 +6,8 @@
 
 =bucle_cuadriculas($maximo_cuadriculas, $clave)
     @for $i from 1 through $maximo_cuadriculas
-        $porcentaje: 100% / $i
+        $total_columnas: $maximo_cuadriculas / $i
+        $porcentaje: 100% / $total_columnas
         +grilla(#{$clave}-#{$i},  $porcentaje)
         .#{$clave}-#{$i}, .#{$clave}-#{$i}-vacio
             box-sizing: border-box
