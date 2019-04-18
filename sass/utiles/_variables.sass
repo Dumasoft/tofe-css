@@ -6,24 +6,24 @@ $queries: ("mo": 0, "ta": 48, "por": 65, "es": 75)
 
 $porcentaje_borde_alerta: 45%
 
-$colores: (azul: (black, $azul-500, darken($azul-500, 25%)),
-blanco-borde-rojo: (black, white, $rojo_duma),
-azul-claro: (black, $azul-claro-300, $azul-500),
-cian: (black, $cian-400, darken($cian-400, 25%)),
-oscuro: (white, $oscuro, darken($oscuro, 25%)),
-rojo: (black, $rojo-500, darken($rojo-500, 25%)),
-rojo-duma: (white, $rojo_duma, darken($rojo_duma, 25%)),
-rosa: (black, $rosa-400, darken($rosa-400, 25%)),
-indigo: (black, $indigo-a100, darken($indigo-a100, 25%)),
-amarillo: (black, $amarillo-100, $amarillo-400),
-verde: (black, $verde, darken($verde, 25%)),
-limon: (black, $limon-a200, darken($limon-a200, 25%)),
-marron: (black, $marron-300, darken($marron-300, 25%)),
-verde-azulado: (black, $verde-azulado-a100, darken($verde-azulado-a100, 25%)),
-morado: (black, $morado-400, darken($morado-400, 25%)),
-purpura: (black, $purpura-400, darken($purpura-400, 25%)),
-gris: (black, $gris, darken($gris, 25%)),
-naranja: (black, $naranja, darken($naranja, 25%)))
+$colores: ('azul': (black, $azul-500, darken($azul-500, 25%)))
+$colores: map_merge(('blanco-borde-rojo': (black, white, $rojo_duma)), $colores)
+$colores: map_merge(('azul-claro': (black, $azul-claro-300, $azul-500)), $colores)
+$colores: map_merge(('cian': (black, $cian-400, darken($cian-400, 25%))), $colores)
+$colores: map_merge(('oscuro': (black, $oscuro, darken($oscuro, 25%))), $colores)
+$colores: map_merge(('rojo': (black, $rojo-500, darken($rojo-500, 25%))), $colores)
+$colores: map_merge(('rojo-duma': (black, $rojo_duma, darken($rojo_duma, 25%))), $colores)
+$colores: map_merge(('rosa': (black, $rosa-400, darken($rosa-400, 25%))), $colores)
+$colores: map_merge(('indigo': (black, $indigo-a100, darken($indigo-a100, 25%))), $colores)
+$colores: map_merge(('amarillo': (black, $amarillo-100, darken($amarillo-100, 25%))), $colores)
+$colores: map_merge(('verde': (black, $verde, darken($verde, 25%))), $colores)
+$colores: map_merge(('limon': (black, $limon-a200, darken($limon-a200, 25%))), $colores)
+$colores: map_merge(('marron': (black, $marron-300, darken($marron-300, 25%))), $colores)
+$colores: map_merge(('verde-azulado': (black, $verde-azulado-a100, darken($verde-azulado-a100, 25%))), $colores)
+$colores: map_merge(('morado': (black, $morado-400, darken($morado-400, 25%))), $colores)
+$colores: map_merge(('purpura': (black, $purpura-400, darken($purpura-400, 25%))), $colores)
+$colores: map_merge(('gris': (black, $gris, darken($gris, 25%))), $colores)
+$colores: map_merge(('naranja': (black, $naranja, darken($naranja, 25%))), $colores)
 
 $espacio: 1rem
 

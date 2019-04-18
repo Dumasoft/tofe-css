@@ -3,6 +3,9 @@
 
 .contenedor, .contenedor-fluido
     margin: 0 auto
+    padding-left: 2rem
+    padding-right: 2rem
+    width: 100%
 
 .contenedor-fluido
     padding: 0 2rem
@@ -64,7 +67,7 @@
                 -ms-flex-align: end
                 align-items: flex-end
             .alrededor-#{$clave}
-                -ms-flex-pack: distribute
+                -ms-flex-pack: inherit
                 justify-content: space-around
             .entre-#{$clave}
                 -webkit-box-pack: justify
@@ -115,7 +118,7 @@
             -ms-flex-align: end
             align-items: flex-end
         .alrededor-#{$clave}
-            -ms-flex-pack: distribute
+            -ms-flex-pack: inherit
             justify-content: space-around
         .entre-#{$clave}
             -webkit-box-pack: justify
@@ -144,3 +147,21 @@
 @media (max-width: 978px)
     .ocultar-ta
         display: none
+
+
+@media (min-width: 576px)
+    .contenedor
+        max-width: 540px
+
+@media (min-width: 768px)
+    .contenedor
+        max-width: 720px
+
+@media (min-width: 992px)
+    .contenedor
+        max-width: 960px
+
+@media (min-width: 1200px)
+    .contenedor
+        max-width: 1140px
+
