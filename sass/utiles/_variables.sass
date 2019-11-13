@@ -2,7 +2,7 @@
 
 $maximo_cuadriculas: 12
 
-$queries: ("mo": 0, "ta": 48, "por": 65, "es": 75)
+$queries: ('mo': 0, 'ta': 48, 'por': 65, 'es': 75)
 
 $porcentaje_borde_alerta: 45%
 
@@ -24,6 +24,11 @@ $colores: map_merge(('morado': (black, $morado-400, darken($morado-400, 25%))), 
 $colores: map_merge(('purpura': (black, $purpura-400, darken($purpura-400, 25%))), $colores)
 $colores: map_merge(('gris': (black, $gris, darken($gris, 25%))), $colores)
 $colores: map_merge(('naranja': (black, $naranja, darken($naranja, 25%))), $colores)
+
+$burbuja: ('oscuro': ($oscuro, white))
+$burbuja: map_merge(('rojo': ($rojo_duma, white)), $burbuja)
+$burbuja: map_merge(('azul': ($azul, white)), $burbuja)
+$burbuja: map_merge(('verde': ($verde, white)), $burbuja)
 
 $espacio: 1rem
 

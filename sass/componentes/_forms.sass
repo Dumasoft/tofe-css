@@ -1,0 +1,168 @@
+@import '../utiles/colores'
+
+input, textarea
+    border-radius: 0
+    &:focus
+        outline: none
+
+.input_borde_inferior
+    border: 0
+    padding: 4px
+    background: transparent
+    border-bottom: 1px solid #ebedf2
+    box-sizing: border-box
+
+.login
+    & input
+        margin-bottom: 40px
+        width: 100%
+        &:focus
+            border-bottom: 1px solid $rojo_duma
+
+::-webkit-input-placeholder
+    color: #9496A0
+    font-weight: 100
+::-moz-placeholder
+    color: #9496A0
+    font-weight: 100
+::-ms-input-placeholder
+    color: #9496A0
+    font-weight: 100
+::-moz-placeholder
+    color: #9496A0
+    font-weight: 100
+
+
+form
+    width: 100%
+    & .etiqueta, & .caja-texto, & .area-texto
+        width: 100%
+    & .etiqueta
+        font-weight: bold
+    & .caja-texto, & .area-texto
+        margin-top: 10px
+        box-sizing: border-box
+    & .elemento-formulario
+        margin-bottom: 20px
+    & .botones
+        width: 100%
+        margin-top: 70px
+    & .area-texto
+        border: 1px solid #ebedf2
+        padding: 10px
+    & .caja-texto
+        padding: 5px
+    & .checkbox-form
+        margin-top: 14px
+    & .campo-form
+        margin-top: 15px
+
+
+.checkbox
+    display: none
+    &:checked + label
+        & i
+            opacity: 1
+        & .estilo-checkbox
+            background: #B8DED1
+
+
+label
+    & .estilo-checkbox
+        width: 23px
+        height: 23px
+        display: inline-block
+        border: 2px solid $oscuro
+        text-align: center
+        line-height: 20px
+        border-radius: 3px
+        cursor: pointer
+    & i
+        font-size: 16px
+        opacity: 0
+    &:hover
+        & .estilo-checkbox
+            background: #B8DED1
+
+
+.select
+    margin-top: 10px
+    width: 100%
+    position: relative
+    & .desplegar-select
+        padding: 6px
+        background: $oscuro
+        color: white
+    & .opciones
+        list-style: none
+        margin: 0
+        padding: 0
+        background: white
+        position: absolute
+        box-sizing: border-box
+        width: 100%
+        max-height: 300px
+        overflow-y: scroll
+        & li
+            &.opcion
+                & i
+                    margin-right: 10px
+            &.buscar
+                padding: 5px
+                & input
+                    &.buscar-select
+                        width: 100%
+                        box-sizing: border-box
+            & a
+                display: block
+                padding: 10px
+                color: black
+            &:nth-child(even)
+                & a
+                    background: rgba(111, 142, 206, 0.08)
+            &:nth-child(odd)
+                & a
+                    background: rgba(127, 164, 237, 0.04)
+
+.foto-subida
+    width: 250px
+    margin: 15px auto auto auto
+    background: #eaeaea
+    min-height: 150px
+    line-height: 150px
+    font-size: 80px
+    & img
+        width: 100%
+
+.input-subida
+    width: 0.1px
+    height: 0.1px
+    opacity: 0
+    overflow: hidden
+    position: absolute
+    z-index: -1
+    & + label
+        font-size: 1em
+        font-weight: 300
+        color: white
+        background-color: $rojo
+        display: inline-block
+        cursor: pointer
+        padding: 10px
+        width: 170px
+        margin-top: 5px
+        & svg
+            fill: white
+            margin-right: 15px
+        &:hover
+            background: $azul
+        & *
+            pointer-events: none
+    &:focus
+        & + label
+            background: $azul
+            outline: 1px dotted #000
+            outline: -webkit-focus-ring-color auto 5px
+
+
+

@@ -1,0 +1,21 @@
+@import '../utiles/colores'
+@import '../utiles/variables'
+
+.burbuja
+    border-radius: 10px
+    font-size: .8rem
+    line-height: 20px
+    min-height: 20px
+    min-width: 20px
+    vertical-align: middle
+    text-align: center
+    display: inline-block
+    padding: 0 2px
+    box-sizing: border-box
+    &.grande
+        padding: 1px 10px
+    @each $clave, $valor in $burbuja
+        &.#{$clave}
+            background-color: nth($valor, 1)
+            color: nth($valor, 2)
+    
