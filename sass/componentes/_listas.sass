@@ -1,0 +1,134 @@
+@import '../utiles/colores'
+
+ol
+    counter-reset: li
+    list-style: none
+    *list-style: decimal
+    font: 15px
+    padding: 0
+    margin-bottom: 4em
+    & ol
+        margin: 0 0 0 2em
+
+.lista-cuadrado
+    & a
+        position: relative
+        display: block
+        padding: .4em .4em .4em .8em
+        *padding: .4em
+        margin: .5em 0 .5em 2.5em
+        background: #ddd
+        color: #444
+        text-decoration: none
+        transition: all .3s ease-out
+        &:hover
+            background: #eee
+            &:after
+                left: -.5em
+        &:before
+            content: counter(li)
+            counter-increment: li
+            position: absolute
+            left: -2.5em
+            top: 50%
+            margin-top: -1em
+            height: 2em
+            width: 2em
+            line-height: 2em
+            text-align: center
+            font-weight: bold
+        &:after
+            position: absolute
+            content: ''
+            border: .5em solid transparent
+            left: -1em
+            top: 50%
+            margin-top: -.5em
+            transition: all .3s ease-out
+    &.rojo
+        & a
+            &:hover
+                &:after
+                    border-left-color: $rojo-300
+            &:before
+                background: $rojo-300
+    &.indigo
+        & a
+            &:hover
+                &:after
+                    border-left-color: $indigo-700
+            &:before
+                background: $indigo-700
+    &.azul
+        & a
+            &:hover
+                &:after
+                    border-left-color: $azul-700
+            &:before
+                background: $azul-700
+    &.verde-azulado
+        & a
+            &:hover
+                &:after
+                    border-left-color: $verde-azulado-600
+            &:before
+                background: $verde-azulado-600
+    &.verde
+        & a
+            &:hover
+                &:after
+                    border-left-color: $verde-600
+            &:before
+                background: $verde-600
+
+.lista-circulo
+    & a
+        position: relative
+        display: block
+        padding: .4em .4em .4em 2em
+        *padding: .4em
+        margin: .5em 0
+        background: #ddd
+        color: #444
+        text-decoration: none
+        border-radius: .3em
+        transition: all .3s ease-out
+        &:hover
+            background: #eee
+            &:before
+                transform: rotate(360deg)
+        &:before
+            content: counter(li)
+            counter-increment: li
+            position: absolute
+            left: -1.3em
+            top: 50%
+            margin-top: -1.3em
+            height: 2em
+            width: 2em
+            line-height: 2em
+            border: .3em solid #fff
+            text-align: center
+            font-weight: bold
+            border-radius: 2em
+            transition: all .3s ease-out
+    &.rojo
+        & a
+            &:before
+                background: $rojo-300
+    &.indigo
+        & a
+            &:before
+                background: $indigo-700
+    &.azul
+        & a
+            &:before
+                background: $azul-700
+    &.verde-azulado
+        & a
+            &:before
+                background: $verde-azulado-600
+    &.verde
+        & a
+            &:before
+                background: $verde-600

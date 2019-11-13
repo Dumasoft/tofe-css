@@ -1,0 +1,46 @@
+@import '../utiles/colores'
+
+.lateral
+    transition: all .3s ease
+    width: 15.625rem
+    min-height: 100%
+    background: $oscuro
+    & ul
+        list-style: none
+        padding: 0
+        margin: 0
+        & a
+            display: block
+            padding: 0.8rem
+            color: #868aa8
+            & i
+                display: table-cell
+                width: 2.2rem
+                &.icono-seccion
+                    font-size: 1.4rem
+                    color: #525672
+                &.mas
+                    font-size: 0.7rem
+            & span
+                display: table-cell
+            &:hover, &:active, &:focus
+                background: $oscuro_hover
+                & .icono-seccion
+                    color: white
+        & li
+            & ul
+                display: none
+            &.activo
+                & ul
+                    display: block
+                    & li
+                        & a
+                            display: block
+                            padding: 0.60rem 0.60rem 0.60rem 50px
+                            background: $oscuro_hover
+                            &:hover, &:active, &:focus
+                                color: white
+                            & i
+                                font-size: 6px
+            & .ico-mas
+                font-size: 8px
