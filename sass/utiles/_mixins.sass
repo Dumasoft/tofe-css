@@ -1,3 +1,4 @@
+@use 'sass:math'
 =grilla($nombre, $tam)
     .#{$nombre}
         -ms-flex-preferred-size: $tam
@@ -6,8 +7,8 @@
 
 =bucle_cuadriculas($maximo_cuadriculas, $clave)
     @for $i from 1 through $maximo_cuadriculas
-        $total_columnas: $maximo_cuadriculas / $i
-        $porcentaje: 100% / $total_columnas
+        $total_columnas: math.div($maximo_cuadriculas, $i)
+        $porcentaje: math.div(100%, $total_columnas)
         +grilla(#{$clave}-#{$i},  $porcentaje)
         .#{$clave}-#{$i}, .#{$clave}-#{$i}-vacio
             box-sizing: border-box
