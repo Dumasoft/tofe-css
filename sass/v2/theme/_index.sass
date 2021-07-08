@@ -1,0 +1,29 @@
+@use '../settings/colors'
+
+
+:root
+    --background-web: #{colors.$background-light-web}
+
+    --principal-color: #{colors.$rojo_duma}
+
+    --display-logo-light: block
+    --display-logo-dark: none
+
+    --color-web-text: #{colors.$color-general-text-light}
+
+    --link-normal: #{colors.$negro_duma}
+    --link-normal-hover: #{colors.$rojo_duma}
+    --link-menu-hover: #{colors.$negro_duma}
+    &.dark-theme
+        --background-web: #{colors.$background-dark-web}
+
+        --principal-color: #{colors.$negro_duma}
+
+        --display-logo-light: none
+        --display-logo-dark: block
+
+        --color-web-text: #{colors.$color-general-text-dark}
+
+        --link-normal: white
+        --link-normal-hover: #{colors.$rojo_duma}
+        --link-menu-hover: #{colors.$rojo_duma}
