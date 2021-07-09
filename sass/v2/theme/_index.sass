@@ -1,29 +1,27 @@
-@use '../settings/colors'
+html
+    &:root
+        --background-web: #{$background-light-web}
 
+        --principal-color: #{$rojo_duma}
 
-:root
-    --background-web: #{colors.$background-light-web}
+        --display-logo-light: block
+        --display-logo-dark: none
 
-    --principal-color: #{colors.$rojo_duma}
+        --color-web-text: #{$color-general-text-light}
 
-    --display-logo-light: block
-    --display-logo-dark: none
+        --link-normal: #{$negro_duma}
+        --link-normal-hover: #{$rojo_duma}
+        --link-menu-hover: #{$negro_duma}
+        &.dark-theme
+            --background-web: #{$background-dark-web}
 
-    --color-web-text: #{colors.$color-general-text-light}
+            --principal-color: #{$negro_duma}
 
-    --link-normal: #{colors.$negro_duma}
-    --link-normal-hover: #{colors.$rojo_duma}
-    --link-menu-hover: #{colors.$negro_duma}
-    &.dark-theme
-        --background-web: #{colors.$background-dark-web}
+            --display-logo-light: none
+            --display-logo-dark: block
 
-        --principal-color: #{colors.$negro_duma}
+            --color-web-text: #{$color-general-text-dark}
 
-        --display-logo-light: none
-        --display-logo-dark: block
-
-        --color-web-text: #{colors.$color-general-text-dark}
-
-        --link-normal: white
-        --link-normal-hover: #{colors.$rojo_duma}
-        --link-menu-hover: #{colors.$rojo_duma}
+            --link-normal: white
+            --link-normal-hover: #{$rojo_duma}
+            --link-menu-hover: #{$rojo_duma}
