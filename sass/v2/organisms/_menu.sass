@@ -2,9 +2,42 @@
 
 
 .menu
-    display: flex
     padding: 0 2.5rem
+    &--desktop
+        display: flex
     & img
         height: 3rem
-    & ul
-        margin-left: auto
+    &--smarthphone
+        display: none
+    &--rojo_duma
+        & ul
+            margin-left: auto
+            & li
+                height: 100%
+                display: flex
+                & a
+                    display: flex
+                    align-items: center
+        & .menu--smarthphone
+            & i
+                font-size: 1.8rem
+    &--movil
+        display: none
+        position: absolute
+        width: 100%
+        box-sizing: border-box
+        & ul
+            width: 100%
+            & li
+                & a
+                    display: block
+                    padding: 5px 0
+                    font-size: 1.2rem
+
+@media screen and (max-width: 760px)
+    .menu
+        &--desktop
+            display: none
+        &--smarthphone
+            display: block
+
