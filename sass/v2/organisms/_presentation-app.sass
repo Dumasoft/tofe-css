@@ -1,0 +1,23 @@
+.presentation-app
+    display: grid
+    grid-template-columns: repeat(3, 1fr)
+    grid-gap: 40px
+    &--item
+        overflow: hidden
+        border-radius: 6px
+        padding: 20px
+        font-weight: 200
+        line-height: 25px
+        & svg
+            width: 35px
+        & h1
+            font-size: 1.2rem
+            margin: 0
+            line-height: 35px
+    &--title
+        display: grid
+        grid-template-columns: 45px calc(100% - 45px)
+
+@media screen and (max-width: 48.75rem)
+    .presentation-app
+        grid-template-columns: 1fr

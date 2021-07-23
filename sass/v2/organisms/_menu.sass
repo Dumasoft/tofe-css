@@ -5,6 +5,10 @@
     padding: 0 2.5rem
     &--desktop
         display: flex
+    & .logo
+        display: grid
+        & svg
+            padding: .7rem 0
     & img
         height: 3rem
     &--smarthphone
@@ -34,10 +38,9 @@
                     padding: 5px 0
                     font-size: 1.2rem
 
-@media screen and (max-width: 760px)
+@media screen and (max-width: 47.5rem)
     .menu
         &--desktop
             display: none
         &--smarthphone
             display: block
-
