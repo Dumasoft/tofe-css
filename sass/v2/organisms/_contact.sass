@@ -1,0 +1,34 @@
+.contact
+    display: grid
+    grid-template-columns: repeat(2, 1fr)
+    &--info
+        display: grid
+        align-content: center
+        align-items: center
+        & svg
+            width: 80%
+    &--form
+        list-style: none
+        & li
+            display: grid
+            grid-template-columns: 120px calc(100% - 120px)
+            margin-bottom: 10px
+        & input, textarea
+            padding: 5px
+        & textarea
+            resize: none
+        & .buttons
+            display: flex
+            flex-direction: row-reverse
+            margin-bottom: 1.5rem
+
+@media screen and (max-width: 47.5rem)
+    .contact
+        grid-template-columns: 1fr
+        &--info
+            display: none
+        &--form
+            & li
+                grid-template-columns: 1fr
+                & label
+                    margin-bottom: .7rem

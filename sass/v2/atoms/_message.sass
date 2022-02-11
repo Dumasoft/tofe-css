@@ -1,0 +1,16 @@
+@use '../settings/variables'
+
+
+.message
+    width: 100%
+    border-radius: variables.$border-button
+    display: grid
+    grid-template-columns: 40px calc(100% - 40px)
+    &--icon
+        padding: variables.$padding-message
+        text-align: center
+    &--text
+        padding: variables.$padding-message
+        font-size: variables.$font-size-text-message
+        display: flex
+        align-items: center

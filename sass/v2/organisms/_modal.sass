@@ -1,0 +1,48 @@
+@use '../settings/variables'
+
+
+.modal
+    position: absolute
+    top: 0
+    left: 0
+    width: 100%
+    height: 100%
+    &--general
+        margin: 15% auto
+        border-radius: variables.$border-button
+    &--normal
+        width: 50%
+    &--header
+        color: white
+        border-top-left-radius: variables.$border-button
+        border-top-right-radius: variables.$border-button
+        display: grid
+        grid-template-columns: calc(100% - 40px) 40px
+    &--title
+        padding: variables.$padding-modal
+        display: flex
+        align-items: center
+        & h1
+            font-size: 1.2rem
+            margin: 0
+            padding: 0
+    &--close
+        display: flex
+        align-items: center
+        justify-content: center
+    &--content
+        padding: variables.$padding-modal
+    &--footer
+        padding: variables.$padding-modal
+        color: white
+        border-bottom-left-radius: variables.$border-button
+        border-bottom-right-radius: variables.$border-button
+    &--buttons
+        display: flex
+        justify-content: flex-end
+        & button
+            margin: 0 .8rem
+            &:first-child
+                margin-left: 0
+            &:last-child
+                margin-right: 0
