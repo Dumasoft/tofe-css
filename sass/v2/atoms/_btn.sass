@@ -2,9 +2,26 @@
 
 
 .btn
-    border-radius: variables.$border-button
     display: inline-block
     padding: .4rem 1rem
     border: none
     cursor: pointer
     font-size: variables.$font-size-button
+    &.square
+        border-radius: 0
+    &.rounded
+        border-radius: variables.$border-button
+    &--icon
+        padding: 0
+        & span, & i
+            float: left
+            transition: all .5s
+        & i
+            padding: 9px
+            width: 44px
+            box-sizing: border-box
+            text-align: center
+            font-size: 1.25em
+        & span
+            padding: 10px
+
