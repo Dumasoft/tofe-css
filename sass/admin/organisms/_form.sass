@@ -1,0 +1,127 @@
+tbody .form-row
+    display: table-row !important
+tbody .form-row.empty-form
+    display: none !important
+tbody .form-row input,
+tbody .form-row select,
+tbody .form-row textarea
+    margin: 15px 0 !important
+div.readonly
+    margin-left: 0 !important
+div.readonly table
+    width: 100% !important
+form .django-ckeditor-widget, form .cke
+    width: 100%
+    box-sizing: border-box
+form .related-widget-wrapper-link
+    color: #373a36
+form .flatpickr--container
+    display: grid
+    grid-template-columns: 1fr 1fr
+    gap: 5px
+    width: 100%
+form .flatpickr--container .flatpickr
+    display: grid
+    grid-template-columns: calc(100% - 45px) 36px
+form .flatpickr--container .flatpickr a
+    display: grid
+    height: 36px
+    width: 36px
+    align-items: center
+    justify-content: center
+    border-top: 1px solid #ccc
+    border-right: 1px solid #ccc
+    border-bottom: 1px solid #ccc
+    font-size: 18px
+form .select2-container--admin-autocomplete .select2-selection--single,
+form .select2-container--admin-autocomplete .select2-selection--multiple
+    min-height: 36px !important
+    border: 1px solid #ccc
+    border-radius: 0
+form .select2-container
+    flex: 1 1 auto !important
+    max-width: 100% !important
+    margin-right: 10px
+form .related-widget-wrapper
+    display: flex
+    align-items: center
+    width: 100%
+form .related-widget-wrapper i
+    font-size: 22px
+form .related-widget-wrapper img
+    display: none
+form fieldset
+    padding: 0
+form .form-row
+    padding: 10px 0 !important
+    display: grid
+    grid-template-columns: calc(50% - 5px) calc(50% - 5px)
+    gap: 10px
+form .form-row.field-text,
+form .form-row.field-biography,
+form .form-row.field-abstract,
+form .form-row.field-original_text
+    grid-template-columns: 99.8% !important
+form .form-row input[type=text],
+form .form-row input[type=password],
+form .form-row input[type=email],
+form .form-row input[type=url],
+form .form-row input[type=number],
+form .form-row input[type=tel],
+form .form-row textarea,
+form .form-row select,
+form .form-row .vTextField
+    width: 100%
+    border-radius: 0
+    box-sizing: border-box
+    margin: 0
+    padding: 6px 8px
+    min-height: 36px
+    font-size: 14px
+form .form-row input[type=text]:focus,
+form .form-row input[type=password]:focus,
+form .form-row input[type=email]:focus,
+form .form-row input[type=url]:focus,
+form .form-row input[type=number]:focus,
+form .form-row input[type=tel]:focus,
+form .form-row textarea:focus,
+form .form-row select:focus,
+form .form-row .vTextField:focus
+    outline: none
+    border: 1px solid #f8485e
+form .form-row .fieldBox
+    float: none !important
+    margin-right: 0 !important
+form .form-row label
+    width: 100% !important
+    padding: 0 !important
+form .form-row label.required
+    color: #f8485e
+input.thin--dumasoft,
+textarea.thin--dumasoft
+    color: #373a36
+input.thin--dumasoft:focus,
+textarea.thin--dumasoft:focus
+    border: 1px solid #f8485e
+
+@media(max-width: 1024px)
+    form fieldset .fieldBox+.fieldBox
+        margin-top: 0
+        padding-top: 0
+        border-top: none
+
+    form fieldset .fieldBox
+        margin: 0 !important
+        padding: 0 !important
+
+@media(max-width: 767px)
+    form .form-row
+        padding: 10px 0 !important
+        display: grid
+        grid-template-columns: 1fr
+
+    form .form-row fieldset .fieldBox
+        padding: 10px 0 !important
+
+    form .form-row label
+        margin: 8px 0
