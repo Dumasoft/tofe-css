@@ -1,0 +1,63 @@
+@use '../settings/variables'
+
+
+.btn
+    display: inline-block
+    padding: .4rem 1rem
+    border: none
+    cursor: pointer
+    font-size: variables.$font-size-button
+    &.square
+        border-radius: 0
+    &.rounded
+        border-radius: variables.$border-button
+    &--icon
+        padding: 0
+        & span, & i
+            float: left
+            transition: all .5s
+        & i
+            padding: 9px
+            width: 44px
+            box-sizing: border-box
+            text-align: center
+            font-size: 1.25em
+        & span
+            padding: 10px
+        &.btn--primary
+            & i
+                background-color: #0050e1
+        &.btn--secondary
+            & i
+                background-color: #050505
+    &--primary
+        background-color: #4889ff
+        transition: background-color 500ms linear
+        color: #fff
+        &:hover, &:focus
+            background-color: #1568ff
+            transition: background-color 500ms linear
+    &--secondary
+        background-color: #373a36
+        color: #fff
+        transition: background-color 500ms linear
+        &:hover, &:focus
+            background-color: #1e201d
+            transition: background-color 500ms linear
+
+a
+    &:link, &:visited
+        &.btn
+            color: #fff !important
+
+
+a.btn
+    text-decoration: none
+    text-transform: uppercase
+    font-weight: 500
+a.btn i
+    margin-right: 5px
+a.btn i, a.btn span
+    vertical-align: middle
+    display: inline-block
+

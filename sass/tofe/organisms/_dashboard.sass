@@ -1,0 +1,54 @@
+.dashboard
+    &--kpis
+        display: grid
+        grid-template-columns: repeat(4, 1fr)
+        grid-gap: 10px
+    &--charts
+        display: grid
+        grid-template-columns: repeat(2, 1fr)
+        grid-gap: 10px
+    &--item
+        padding: 10px
+        border-radius: 5px
+        border: 1px solid #eff2f5
+        margin-bottom: 10px
+        & ul
+            list-style: none
+            padding: 0
+            & li
+                list-style: none
+                border-left: 4px solid black
+                margin: 10px 0
+                padding: 5px 10px
+                display: grid
+                grid-template-columns: 35px calc(100% - 35px)
+                &.none
+                    border-color: #969696
+                &.low
+                    border-color: #009ef7
+                &.medium
+                    border-color: #50cd89
+                &.important
+                    border-color: #ffc700
+                &.urgent
+                    border-color: #f1416c
+        &.normal
+            background-color: #fff
+        &.green
+            background-color: #def2f2
+        &.yellow
+            background-color: #ffecdb
+        &.violet
+            background-color: #ebdfff
+        &.blue
+            background-color: #d9ecfb
+        & .option-buttons-map
+            display: flex
+            justify-content: flex-end
+            & button
+                margin: 5px
+                &:last-child
+                    margin-right: 0
+        & .map
+            width: 100%
+            height: 450px

@@ -1,0 +1,57 @@
+.numInputWrapper
+    position: relative
+    height: auto
+.numInputWrapper input, .numInputWrapper span
+    display: inline-block
+.numInputWrapper input
+    width: 100%
+.numInputWrapper input::-ms-clear
+    display: none
+.numInputWrapper input::-webkit-outer-spin-button,
+.numInputWrapper input::-webkit-inner-spin-button
+    margin: 0
+    -webkit-appearance: none
+.numInputWrapper span
+    position: absolute
+    right: 0
+    width: 14px
+    padding: 0 4px 0 2px
+    height: 50%
+    line-height: 50%
+    opacity: 0
+    cursor: pointer
+    border: 1px solid rgba(57, 57, 57, .15)
+    -webkit-box-sizing: border-box
+    box-sizing: border-box
+.numInputWrapper span:hover
+    background: rgba(0, 0, 0, .1)
+.numInputWrapper span:active
+    background: rgba(0, 0, 0, .2)
+.numInputWrapper span:after
+    display: block
+    content: ""
+    position: absolute
+.numInputWrapper span.arrowUp
+    top: 0
+    border-bottom: 0
+.numInputWrapper span.arrowUp:after
+    border-left: 4px solid rgba(0, 0, 0, 0)
+    border-right: 4px solid rgba(0, 0, 0, 0)
+    border-bottom: 4px solid rgba(57, 57, 57, .6)
+    top: 26%
+.numInputWrapper span.arrowDown
+    top: 50%
+.numInputWrapper span.arrowDown:after
+    border-left: 4px solid rgba(0, 0, 0, 0)
+    border-right: 4px solid rgba(0, 0, 0, 0)
+    border-top: 4px solid rgba(57, 57, 57, .6)
+    top: 40%
+.numInputWrapper span svg
+    width: inherit
+    height: auto
+.numInputWrapper span svg path
+    fill: rgba(0, 0, 0, .5)
+.numInputWrapper:hover
+    background: rgba(0, 0, 0, .05)
+.numInputWrapper:hover span
+    opacity: 1

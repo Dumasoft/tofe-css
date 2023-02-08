@@ -1,0 +1,31 @@
+@use '../settings/variables'
+
+
+.message
+    width: 100%
+    border-radius: variables.$border-button
+    display: grid
+    grid-template-columns: 40px calc(100% - 40px)
+    &--icon
+        padding: variables.$padding-message
+        text-align: center
+    &--text
+        padding: variables.$padding-message
+        font-size: variables.$font-size-text-message
+        display: flex
+        align-items: center
+    &--success
+        background-color: #d4e7e2
+        & .message--icon
+            background-color: #72b0a0
+            color: #fff
+    &--error
+        background-color: #f6a3a3
+        & .message--icon
+            background-color: #e81818
+            color: #fff
+    &--warning
+        background-color: #fbf2da
+        & .message--icon
+            background-color: #ecc150
+            color: #fff
