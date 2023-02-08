@@ -1,0 +1,36 @@
+.field-notas
+    display: block !important
+
+.note
+    margin-top: 30px
+    &--header
+        display: grid
+        grid-template-columns: calc(100% - 150px) 150px
+        padding: 5px
+        align-items: center
+    &--title
+        font-weight: bold
+        font-size: .8rem
+    &--tags
+        display: flex
+        gap: 10px
+        border-bottom: 1px solid #d8d8d8
+        padding: 5px
+    &--actions
+        display: flex
+        flex-direction: row-reverse
+    &--content
+        display: none
+        padding: 5px 10px
+        text-align: justify
+        transition: all .35s
+        & ul
+            margin-left: 5px !important
+            & li
+                list-style: square !important
+        &.active
+            display: block
+    &--documents
+        display: none
+        &.active
+            display: block

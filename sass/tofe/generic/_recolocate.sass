@@ -1,0 +1,262 @@
+html, body
+    background-color: var(--background-web)
+    color: var(--color-web-text)
+
+.svg--color
+    fill: #4889ff
+
+.swagger-ui .information-container, .swagger-ui .topbar
+    display: none
+
+.menu svg .simbol--dog
+    fill: var(--simbol-menu)
+    fill-rule: nonzero
+.menu svg .simbol--soft
+    fill: var(--simbol-menu)
+    fill-rule: nonzero
+.menu svg .simbol--duma
+    fill: #fff
+    fill-rule: nonzero
+.footer svg .simbol--dog
+    fill: var(--simbol-footer)
+    fill-rule: nonzero
+.footer svg .simbol--soft
+    fill: var(--simbol-footer)
+    fill-rule: nonzero
+.footer svg .simbol--duma
+    fill: var(--simbol-text-footer)
+    fill-rule: nonzero
+
+.logo--admin
+    display: grid
+.logo--admin svg
+    width: 120px
+.logo--admin svg .simbol--dog
+    fill: var(--simbol-menu)
+    fill-rule: nonzero
+.logo--admin svg .simbol--soft
+    fill: var(--simbol-menu)
+    fill-rule: nonzero
+.logo--admin svg .simbol--duma
+    fill: #fff
+    fill-rule: nonzero
+
+.loading
+    border-left-color: #4889ff
+
+.blinking-cursor
+    font-weight: 100
+    font-size: 30px
+    color: #4889ff
+    animation: 1s blink step-end infinite
+
+@keyframes blink
+    from, to
+        color: rgba(0, 0, 0, 0)
+    50%
+        color: #4889ff
+
+.progress
+    background: rgba(255, 255, 255, .1)
+    justify-content: flex-start
+    border-radius: 100px
+    align-items: center
+    position: relative
+    padding: 0 5px
+    display: flex
+    height: 20px
+.progress--value
+    border-radius: 100px
+    height: 10px
+    width: 0
+.progress--value.basic
+    animation: basic_progress 3s normal forwards
+    box-shadow: 0 10px 40px -10px #f6a3a3
+    background: #f6a3a3
+.progress--value.medium
+    animation: basic_medium 3s normal forwards
+    box-shadow: 0 10px 40px -10px #e1d3fa
+    background: #e1d3fa
+.progress--value.expert
+    animation: basic_expert 3s normal forwards
+    box-shadow: 0 10px 40px -10px #d2e4f9
+    background: #d2e4f9
+.progress--value.advanced
+    animation: basic_advanced 3s normal forwards
+    box-shadow: 0 10px 40px -10px #d4e7e2
+    background: #d4e7e2
+
+@keyframes basic_progress
+    0%
+        width: 0
+    100%
+        width: 25%
+
+@keyframes basic_medium
+    0%
+        width: 0
+    100%
+        width: 50%
+
+@keyframes basic_expert
+    0%
+        width: 0
+    100%
+        width: 75%
+
+@keyframes basic_advanced
+    0%
+        width: 0
+    100%
+        width: 100%
+
+a
+    color: var(--link-normal)
+a:hover, a:focus
+    color: var(--link-normal-hover)
+
+.check.normal input:checked~.checkmark
+    background-color: #373a36
+.check.normal:hover input~.checkmark
+    background-color: #4889ff
+
+.menu--rojo_duma
+    display: grid
+    grid-template-columns: 170px calc(100% - 170px)
+    background-color: var(--principal-color)
+    transition: background-color 500ms linear
+.menu--rojo_duma .menspan
+    color: #fff
+    font-family: "nasalization", sans-serif
+.menu--rojo_duma ul li a
+    padding: 0 10px
+    color: #fff
+.menu--rojo_duma ul li:hover a
+    color: var(--link-menu-hover)
+.menu span
+    color: #fff
+    font-family: "nasalization", sans-serif
+.menu--movil
+    background-color: var(--principal-color)
+    border-top: 1px solid #373a36
+.menu--movil ul li a
+    color: #fff
+.menu--movil ul li:hover a
+    color: var(--link-menu-hover)
+
+#header
+    background: var(--principal-color)
+
+.modal
+    background-color: var(--background-modal)
+.modal--general
+    background-color: var(--background-web)
+.modal--content
+    color: var(--color-web-text)
+.modal--header, .modal--footer
+    background-color: var(--principal-color-modal)
+.modal--close
+    cursor: pointer
+.modal--close a
+    color: #fff
+.modal--close:hover a,
+.modal--close:focus a
+    color: var(--boton-close-modal)
+.presentation-grid
+    background: var(--border-presentation-grid)
+.presentation-grid--item
+    background: var(--background-presentation-grid)
+.presentation-app--item
+    background: var(--background-presentation-app)
+
+@media screen and (max-width: 47.5rem)
+    .footer--dumasoft
+        grid-template-columns: 1fr
+
+.filters-log i
+    color: #4889ff
+.filters-log span
+    cursor: pointer
+.log_file_list a
+    color: var(--link-normal) !important
+    text-decoration: none !important
+.log_file_list a:hover, .log_file_list a:focus
+    color: var(--link-normal-hover) !important
+.log_file_list i
+    color: #4889ff
+    margin-left: .8rem
+.download-buttons
+    margin-bottom: .5rem
+.error--info
+    display: grid
+    justify-content: center
+    align-content: center
+.logo--error
+    width: 450px
+.logo--simbol
+    fill: #4889ff
+.logo--text
+    font-family: "NasalizationRg-Regular", "Nasalization", sans-serif
+    font-size: 646.023px
+    fill: var(--color-web-text)
+.contact--form input:focus-visible,
+.contact--form textarea:focus-visible
+    outline-color: #4889ff
+.curriculum
+    display: grid
+    grid-template-columns: 30% 70%
+.curriculum--info, .curriculum--history
+    padding: 10px
+.curriculum--info
+    background-color: #373a36
+    color: #fff
+.curriculum--info p
+    margin: 0 0 5px 0
+    font-size: .7rem
+.curriculum--info .progress
+    margin-bottom: 10px
+.curriculum--history .tags
+    display: flex
+.curriculum--history h4
+    color: #4889ff
+.curriculum--history .projects
+    background-color: #d2e4f9
+    text-align: justify
+    padding: 15px
+    margin: 10px 0
+.curriculum--history .projects ul li
+    margin: 5px 0
+
+.note
+    border: 1px solid #8d8c8c
+.note--content p
+    font-weight: 300
+    font-size: .855rem
+    line-height: 22px
+.note--content h1,
+.note--content h2,
+.note--content h3,
+.note--content h4,
+.note--content h5,
+.note--content h6
+    background-color: rgba(0, 0, 0, 0)
+    color: var(--body-quiet-color)
+    padding: 0
+    width: 100%
+    border-bottom: 1px dashed #d8d1d2
+
+
+
+.field-get_notes,
+.field-get_quotes,
+.field-get_books_author,
+.field-personal_books,
+.field-get_child_notes
+    display: block !important
+
+.fa-green
+    color: #4db24d
+.fa-red
+    color: #d2401e
+.fa-green, .fa-red
+    font-size: 15px
