@@ -5,7 +5,6 @@
     display: inline-block
     padding: .4rem 1rem
     border: none
-    cursor: pointer
     font-size: variables.$font-size-button
     &.square
         border-radius: 0
@@ -26,23 +25,23 @@
             padding: 10px
         &.btn--primary
             & i
-                background-color: #0050e1
+                background-color: var(--principal-color)
         &.btn--secondary
             & i
-                background-color: #050505
+                background-color: var(--secondary-color)
     &--primary
-        background-color: #4889ff
+        background-color: var(--principal-color)
         transition: background-color 500ms linear
         color: #fff
         &:hover, &:focus
-            background-color: #1568ff
+            background-color: var(--principal-color)
             transition: background-color 500ms linear
     &--secondary
-        background-color: #373a36
+        background-color: var(--secondary-color)
         color: #fff
         transition: background-color 500ms linear
         &:hover, &:focus
-            background-color: #1e201d
+            background-color: var(--dark-secondary-color)
             transition: background-color 500ms linear
 
 a

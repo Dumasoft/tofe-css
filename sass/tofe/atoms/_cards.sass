@@ -1,0 +1,33 @@
+.cards--book
+    display: grid
+    grid-template-columns: 1fr
+    gap: 10px
+.card
+    &--cover
+        padding: .8rem
+        img
+            max-width: 100px
+    &--content
+        display: grid
+        grid-template-columns: 200px calc(100% - 200px)
+        gap: 10px
+    &--book
+        border: 1px solid var(--border)
+        padding: .5rem
+        font-weight: 200
+        line-height: 1.8rem
+        margin: 1.2rem
+        background: white
+        & h1
+            font-size: 1rem
+        & h2
+            font-size: .8rem
+            font-weight: 300
+    &--head
+        border-bottom: 1px solid var(--border)
+        padding-bottom: .3rem
+        display: flex
+        flex-direction: row-reverse
+        & i
+            font-size: 20px
+            margin-left: 15px

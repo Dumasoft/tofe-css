@@ -1,0 +1,31 @@
+.page
+    &--read
+        max-width: 800px
+        margin: auto
+        border: 1px solid var(--border)
+        padding: 2rem
+    &--content
+        & h1, & h2, & h3, & h4, & h5, & h6
+            line-height: 3rem
+    &--header
+        display: grid
+        grid-template-columns: 1fr 1fr
+        font-size: 24px
+        &--status
+            display: flex
+        &--actions
+            display: flex
+            flex-direction: row-reverse
+        & i
+            margin: 0 .6rem
+    &--footer
+        display: flex
+        flex-direction: row-reverse
+
+.presentation-grid--title
+        line-height: 3rem
+
+.presentation-grid--text
+    font-weight: 200
+    line-height: 1.8rem
+    hyphens: auto
