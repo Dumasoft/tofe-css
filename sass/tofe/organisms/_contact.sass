@@ -35,10 +35,15 @@
             font-size: .9rem
             &:focus
                 border: 1px solid var(--principal-color)
+        & textarea
+            resize: none
         & input
             height: 36px
-        & label
-            font-size: .8rem
+        & p
+            & label
+                font-size: 1.2rem
+                font-family: "nasalization", sans-serif
+                text-transform: lowercase
 
 @media screen and (max-width: 47.5rem)
     .contact

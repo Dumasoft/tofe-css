@@ -3,6 +3,13 @@
     grid-template-columns: 1fr
     gap: 10px
 .card
+    &--friend
+        border: 1px solid var(--border)
+        padding: 0.5rem
+        font-weight: 200
+        line-height: 1.8rem
+        background: #fff
+        margin: 1.2rem 0
     &--cover
         padding: .8rem
         img
@@ -10,13 +17,11 @@
     &--content
         display: grid
         grid-template-columns: 200px calc(100% - 200px)
-        gap: 10px
     &--book
         border: 1px solid var(--border)
         padding: .5rem
         font-weight: 200
         line-height: 1.8rem
-        margin: 1.2rem
         background: white
         & h1
             font-size: 1rem
@@ -31,3 +36,12 @@
         & i
             font-size: 20px
             margin-left: 15px
+    &--footer
+        border-top: 1px solid var(--border)
+        padding-top: 0.3rem
+        display: flex
+        flex-direction: row-reverse
+        & span
+            margin: 0 7px
+        & i
+            font-size: 20px
