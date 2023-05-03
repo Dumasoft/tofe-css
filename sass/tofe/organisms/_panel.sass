@@ -1,0 +1,17 @@
+.panel
+    & .nav-tabs
+        list-style: none
+        padding: 0
+        border-bottom: 1px solid var(--border)
+        & li
+            display: inline-block
+            padding: 5px 10px
+            cursor: pointer
+            font-weight: 200
+            &.active
+                background: #373a36
+                color: white
+    & .tab-pane
+        display: none
+        &.active
+            display: block
