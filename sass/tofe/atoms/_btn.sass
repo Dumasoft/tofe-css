@@ -2,10 +2,11 @@
 
 
 .btn
-    display: inline-block
     padding: .4rem 1rem
     border: none
     font-size: variables.$font-size-button
+    display: flex
+    align-items: center
     &.square
         border-radius: 0
     &.rounded
@@ -16,11 +17,10 @@
             float: left
             transition: all .5s
         & i
-            padding: 10px
-            width: 44px
+            padding: 9px
             box-sizing: border-box
             text-align: center
-            font-size: 1.25em
+            font-size: 1.25em !important
         & span
             padding: 10px
         &.btn--primary
@@ -29,12 +29,15 @@
         &.btn--secondary
             & i
                 background-color: var(--dark-secondary-color)
+        &.btn--danger
+            & i
+                background-color: darkred
     &--primary
         background-color: var(--principal-color)
         transition: background-color 500ms linear
         color: #fff
         &:hover, &:focus
-            background-color: var(--principal-color)
+            background-color: var(--dark-primary-color)
             transition: background-color 500ms linear
     &--secondary
         background-color: var(--secondary-color)
@@ -42,6 +45,13 @@
         transition: background-color 500ms linear
         &:hover, &:focus
             background-color: var(--dark-secondary-color)
+            transition: background-color 500ms linear
+    &--danger
+        background-color: firebrick
+        color: #fff
+        transition: background-color 500ms linear
+        &:hover, &:focus
+            background-color: darkred
             transition: background-color 500ms linear
 
 a
@@ -52,10 +62,9 @@ a
 
 a.btn
     text-decoration: none
-    text-transform: uppercase
     font-weight: 500
-a.btn i
-    margin-right: 5px
+    & i
+        font-size: 1.2rem
 a.btn i, a.btn span
     vertical-align: middle
     display: inline-block

@@ -39,11 +39,10 @@ td.original p
     display: none
 .inline-group .tabular tr.has_original td
     padding-top: 0 !important
-[type=checkbox]:not(:checked),
-[type=checkbox]:checked
-    position: absolute
-    left: 0
-    opacity: .01
+.checkbox-row
+    & [type=checkbox]:not(:checked),
+    & [type=checkbox]:checked
+        display: none
 [type=checkbox]:not(:checked)+label,
 [type=checkbox]:checked+label
     position: relative
