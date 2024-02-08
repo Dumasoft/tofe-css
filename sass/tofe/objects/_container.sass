@@ -1,7 +1,43 @@
 @use '../settings/variables'
 
-
+.o-header
+    padding: 1.6rem 1rem
+    text-align: center
+    color: black
+    &--blue
+        background-color: var(--pastel-blue)
 .o-container
     max-width: variables.$max-width-container
     padding: variables.$spacing variables.$spacing-s
     margin: 0 auto
+    &--principal
+        display: grid
+        grid-template-columns: 280px  calc(100% - 280px)
+        gap: 5px
+        & section
+            h1
+                padding: 0
+                margin: 0
+        & aside
+            padding: 0 16px
+            & p
+                font-weight: 300
+            & ul
+                list-style: none
+                margin: 0
+                padding: 0
+                & li
+                    padding: .5rem
+                    font-size: 1rem
+                    &.active
+                        background-color: var(--secondary-color)
+                        & a
+                            color: white
+                    & i
+                        margin-right: 8px
+                    & a
+                        display: flex
+                        & span
+                            display: block
+                            margin-right: .4rem
+

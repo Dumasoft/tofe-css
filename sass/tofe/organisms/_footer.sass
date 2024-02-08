@@ -3,11 +3,15 @@
     padding: 1.6rem 1rem
     margin: 0 auto
     border-top: 1px solid var(--border-footer)
+    font-weight: 200
+    font-size: .8rem
+    & span
+        display: block
     &--dumasoft
         display: grid
         grid-template-columns: repeat(5,  1fr)
         & .copyright
-            color: #f8485e
+            color: var(--red-duma)
         & p
             font-size: .8rem
     &--copyright
@@ -18,12 +22,14 @@
         font-size: .8rem
     & svg
         width: 5.25rem
+        & .simbol--dog,
+        & .simbol--soft
+            fill: var(--simbol-footer)
+            fill-rule: nonzero
+        & .simbol--duma
+            fill: var(--secondary-color)
+            fill-rule: nonzero
 
-
-.footer--dumasoft,
-.simbol--dog,
-.simbol--soft
-    fill: #f8485e !important
-
-i.copyright
-    color: #f8485e !important
+    & i
+        &.copyright
+            color: var(--red-duma)

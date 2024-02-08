@@ -3,7 +3,7 @@ html, body
     color: var(--color-web-text)
 
 .svg--color
-    fill: #4889ff
+    fill: var(--principal-color)
 
 .swagger-ui .information-container, .swagger-ui .topbar
     display: none
@@ -17,16 +17,6 @@ html, body
 .menu svg .simbol--duma
     fill: #fff
     fill-rule: nonzero
-.footer svg .simbol--dog
-    fill: var(--simbol-footer)
-    fill-rule: nonzero
-.footer svg .simbol--soft
-    fill: var(--simbol-footer)
-    fill-rule: nonzero
-.footer svg .simbol--duma
-    fill: var(--simbol-text-footer)
-    fill-rule: nonzero
-
 .logo--admin
     display: grid
 .logo--admin svg
@@ -42,19 +32,19 @@ html, body
     fill-rule: nonzero
 
 .loading
-    border-left-color: #4889ff
+    border-left-color: var(--principal-color)
 
 .blinking-cursor
     font-weight: 100
     font-size: 30px
-    color: #4889ff
+    color: var(--principal-color)
     animation: 1s blink step-end infinite
 
 @keyframes blink
     from, to
         color: rgba(0, 0, 0, 0)
     50%
-        color: #4889ff
+        color: var(--principal-color)
 
 .progress
     background: rgba(255, 255, 255, .1)
@@ -71,20 +61,20 @@ html, body
     width: 0
 .progress--value.basic
     animation: basic_progress 3s normal forwards
-    box-shadow: 0 10px 40px -10px #f6a3a3
-    background: #f6a3a3
+    box-shadow: 0 10px 40px -10px var(--pastel-red)
+    background: var(--pastel-red)
 .progress--value.medium
     animation: basic_medium 3s normal forwards
-    box-shadow: 0 10px 40px -10px #e1d3fa
-    background: #e1d3fa
+    box-shadow: 0 10px 40px -10px var(--pastel-purple)
+    background: var(--pastel-purple)
 .progress--value.expert
     animation: basic_expert 3s normal forwards
-    box-shadow: 0 10px 40px -10px #d2e4f9
-    background: #d2e4f9
+    box-shadow: 0 10px 40px -10px var(--pastel-blue)
+    background: var(--pastel-blue)
 .progress--value.advanced
     animation: basic_advanced 3s normal forwards
-    box-shadow: 0 10px 40px -10px #d4e7e2
-    background: #d4e7e2
+    box-shadow: 0 10px 40px -10px var(--pastel-green)
+    background: var(--pastel-green)
 
 @keyframes basic_progress
     0%
@@ -118,7 +108,7 @@ a:hover, a:focus
 .check.normal input:checked~.checkmark
     background-color: #373a36
 .check.normal:hover input~.checkmark
-    background-color: #4889ff
+    background-color: var(--principal-color)
 
 .menu--rojo_duma
     display: grid
@@ -155,8 +145,6 @@ a:hover, a:focus
     color: var(--color-web-text)
 .modal--header, .modal--footer
     background-color: var(--principal-color-modal)
-.modal--close
-    cursor: pointer
 .modal--close a
     color: #fff
 .modal--close:hover a,
@@ -174,16 +162,14 @@ a:hover, a:focus
         grid-template-columns: 1fr
 
 .filters-log i
-    color: #4889ff
-.filters-log span
-    cursor: pointer
+    color: var(--principal-color)
 .log_file_list a
     color: var(--link-normal) !important
     text-decoration: none !important
 .log_file_list a:hover, .log_file_list a:focus
     color: var(--link-normal-hover) !important
 .log_file_list i
-    color: #4889ff
+    color: var(--principal-color)
     margin-left: .8rem
 .download-buttons
     margin-bottom: .5rem
@@ -194,14 +180,14 @@ a:hover, a:focus
 .logo--error
     width: 450px
 .logo--simbol
-    fill: #4889ff
+    fill: var(--principal-color)
 .logo--text
     font-family: "NasalizationRg-Regular", "Nasalization", sans-serif
     font-size: 646.023px
     fill: var(--color-web-text)
 .contact--form input:focus-visible,
 .contact--form textarea:focus-visible
-    outline-color: #4889ff
+    outline-color: var(--principal-color)
 .curriculum
     display: grid
     grid-template-columns: 30% 70%
@@ -218,7 +204,7 @@ a:hover, a:focus
 .curriculum--history .tags
     display: flex
 .curriculum--history h4
-    color: #4889ff
+    color: var(--principal-color)
 .curriculum--history .projects
     background-color: #d2e4f9
     text-align: justify
@@ -260,3 +246,14 @@ a:hover, a:focus
     color: #d2401e
 .fa-green, .fa-red
     font-size: 15px
+
+table th, table td
+    padding: 6px 13px
+    border: 1px solid #ddd
+
+table thead
+    background: #cccccc
+
+table
+    width: 100%
+

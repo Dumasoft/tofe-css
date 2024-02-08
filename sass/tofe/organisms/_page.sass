@@ -1,0 +1,62 @@
+.page
+    &--read
+        max-width: 800px
+        margin: auto
+        border: 1px solid var(--border)
+    &--content
+        & h1, & h2, & h3, & h4, & h5, & h6
+            line-height: 3rem
+    &--header
+        display: grid
+        grid-template-columns: 1fr 1fr
+        font-size: 24px
+        &--status
+            display: flex
+            padding: .6rem
+        &--actions
+            display: flex
+            flex-direction: row-reverse
+            padding: .6rem
+        & i
+            margin: 0 .6rem
+    &--footer
+        display: flex
+        flex-direction: row-reverse
+        border-top: 1px solid var(--border)
+        padding: 1rem 2rem
+
+
+.presentation-grid
+    &--title
+        line-height: 3rem
+    &--principal-title
+        padding: 0 2rem
+    &--text
+        font-weight: 200
+        line-height: 1.8rem
+        hyphens: auto
+        & h2, h3
+            font-family: "Source Sans Pro", sans-serif
+        & h2
+            color: #9c0b0a
+            font-size: 1.8rem
+            margin: 0
+        & h3
+            color: #2167c3
+            font-size: 1.6rem
+            margin: 0
+    &--header
+        border-top: 1px solid var(--border)
+        & h1, h2, h3
+            padding: 0 2rem
+        & i
+            font-size: 24px
+        &--actions
+            display: flex
+            justify-content: flex-end
+
+.show-content-lector
+    height: 100%
+    display: grid
+    align-items: center
+    padding: .8rem
