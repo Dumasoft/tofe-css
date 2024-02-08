@@ -1,0 +1,47 @@
+.cards--book
+    display: grid
+    grid-template-columns: 1fr
+    gap: 10px
+.card
+    &--friend
+        border: 1px solid var(--border)
+        padding: 0.5rem
+        font-weight: 200
+        line-height: 1.8rem
+        background: #fff
+        margin: 1.2rem 0
+    &--cover
+        padding: .8rem
+        img
+            max-width: 100px
+    &--content
+        display: grid
+        grid-template-columns: 200px calc(100% - 200px)
+    &--book
+        border: 1px solid var(--border)
+        padding: .5rem
+        font-weight: 200
+        line-height: 1.8rem
+        background: white
+        & h1
+            font-size: 1rem
+        & h2
+            font-size: .8rem
+            font-weight: 300
+    &--head
+        border-bottom: 1px solid var(--border)
+        padding-bottom: .3rem
+        display: flex
+        flex-direction: row-reverse
+        & i
+            font-size: 20px
+            margin-left: 15px
+    &--footer
+        border-top: 1px solid var(--border)
+        padding-top: 0.3rem
+        display: flex
+        flex-direction: row-reverse
+        & span
+            margin: 0 7px
+        & i
+            font-size: 20px

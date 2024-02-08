@@ -2,11 +2,11 @@
 
 
 .btn
-    display: inline-block
     padding: .4rem 1rem
     border: none
-    cursor: pointer
     font-size: variables.$font-size-button
+    display: flex
+    align-items: center
     &.square
         border-radius: 0
     &.rounded
@@ -18,31 +18,40 @@
             transition: all .5s
         & i
             padding: 9px
-            width: 44px
             box-sizing: border-box
             text-align: center
-            font-size: 1.25em
+            font-size: 1.25em !important
         & span
             padding: 10px
         &.btn--primary
             & i
-                background-color: #0050e1
+                background-color: var(--dark-primary-color)
         &.btn--secondary
             & i
-                background-color: #050505
+                background-color: var(--dark-secondary-color)
+        &.btn--danger
+            & i
+                background-color: darkred
     &--primary
-        background-color: #4889ff
+        background-color: var(--principal-color)
         transition: background-color 500ms linear
         color: #fff
         &:hover, &:focus
-            background-color: #1568ff
+            background-color: var(--dark-primary-color)
             transition: background-color 500ms linear
     &--secondary
-        background-color: #373a36
+        background-color: var(--secondary-color)
         color: #fff
         transition: background-color 500ms linear
         &:hover, &:focus
-            background-color: #1e201d
+            background-color: var(--dark-secondary-color)
+            transition: background-color 500ms linear
+    &--danger
+        background-color: firebrick
+        color: #fff
+        transition: background-color 500ms linear
+        &:hover, &:focus
+            background-color: darkred
             transition: background-color 500ms linear
 
 a
@@ -53,10 +62,9 @@ a
 
 a.btn
     text-decoration: none
-    text-transform: uppercase
     font-weight: 500
-a.btn i
-    margin-right: 5px
+    & i
+        font-size: 1.2rem
 a.btn i, a.btn span
     vertical-align: middle
     display: inline-block

@@ -3,17 +3,30 @@
 
 .menu
     padding: 0 2.5rem
+    & span
+        color: #fff
+        font-family: "nasalization", sans-serif
     &--desktop
         display: flex
     & .logo
         display: grid
+        & img
+            padding: .7rem 0
+            width: 60px
+            height: auto
         & svg
             padding: .7rem 0
     & img
         height: 3rem
     &--smarthphone
         display: none
-    &--rojo_duma
+    &--rojo_duma, &--black
+        display: grid
+        grid-template-columns: 170px calc(100% - 170px)
+        transition: background-color 500ms linear
+        & .menspan
+            color: #fff
+            font-family: "nasalization", sans-serif
         & ul
             margin-left: auto
             & li
@@ -22,9 +35,27 @@
                 & a
                     display: flex
                     align-items: center
+                    padding: 0 10px
+                    color: #fff
+                    & i
+                        font-size: 1rem
         & .menu--smarthphone
             & i
                 font-size: 1.8rem
+    &--rojo_duma
+        background-color: var(--principal-color)
+        & ul
+            & li
+                &:hover
+                    & a
+                        color: var(--link-menu-hover)
+    &--black
+        background-color: var(--menu-dark)
+        & ul
+            & li
+                &:hover
+                    & a
+                        color: var(--principal-color)
     &--movil
         display: none
         position: absolute
@@ -37,6 +68,18 @@
                     display: block
                     padding: 5px 0
                     font-size: 1.2rem
+
+
+
+
+
+.menu--movil
+    background-color: var(--principal-color)
+    border-top: 1px solid #373a36
+.menu--movil ul li a
+    color: #fff
+.menu--movil ul li:hover a
+    color: var(--link-menu-hover)
 
 @media screen and (max-width: 47.5rem)
     .menu

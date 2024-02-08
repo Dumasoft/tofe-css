@@ -1,24 +1,9 @@
 .profile
-    display: grid
-    grid-template-columns: 30% 70%
-    gap: 5px
     & .fa-infinity
-        color: #f8485e
-    & aside
-        & p
-            font-weight: 300
-        & ul
-            list-style: none
-            margin: 0
-            padding: 0
-            & li
-                padding: 10px 0
-                font-size: .8rem
-                & i
-                    margin-right: 8px
+        color: var(--principal-color)
     &--icon
-        background: #000
-        color: #fff
+        background: var(--secondary-color)
+        color: white
         padding: 10px
         width: 20px
         text-align: center
@@ -28,17 +13,27 @@
         grid-gap: 1rem
         grid-template-columns: 40px calc(100% - 40px - 1rem)
         align-items: center
+        font-weight: 100
+    &--content
+        display: grid
+        grid-template-columns: 300px calc(100% - 300px)
+    .profile--header
+        padding: 0 0 30px 0
 
 .image-profile
-    display: grid
-    grid-gap: 1rem
-    grid-template-columns: 280px calc(100% - 280px)
-    text-align: center
+    display: block
+    text-align: left
     & img
         width: 280px
         height: 280px
-        border-radius: 50%
         object-fit: cover
         object-position: center center
-        margin-top: 20px
 
+.upload-file-label
+    width: 280px
+    box-sizing: border-box
+
+.button-upload-image
+    width: 280px
+    & .btn
+        width: 280px

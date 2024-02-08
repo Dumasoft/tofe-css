@@ -23,9 +23,11 @@ body .container--login .card
     display: grid
     box-sizing: border-box
 body .container--login .card--header
-    background-color: #4889ff
+    background-color: var(--principal-color)
     padding: 10px
     height: 25px
+    & i
+        color: white
 body .container--login .card--header svg
     height: 100%
 body .container--login .card--header svg .simbol--dog
@@ -36,31 +38,33 @@ body .container--login .card--header svg .simbol--duma
     fill: #fff
 body .container--login .card--body
     padding: 10px
-    border-left: 1px solid #c4dce8
-    border-right: 1px solid #c4dce8
+    border-left: 1px solid var(--pastel-red)
+    border-right: 1px solid var(--pastel-red)
     background-color: #fff
 body .container--login .card--body input
     width: 100%
     box-sizing: border-box
-    border: 1px solid #ccc
+    border: 1px solid var(--border)
     padding: 5px
     margin-top: 5px
     outline: none
-    color: #373a36
+    color: var(--secondary-color)
     font-weight: 200
     font-size: .9rem
     height: 36px
 body .container--login .card--body input:focus
-    border: 1px solid #4889ff
+    border: 1px solid var(--principal-color)
 body .container--login .card--body label
     font-size: .8rem
 body .container--login .card--footer
-    border-left: 1px solid #c4dce8
-    border-right: 1px solid #c4dce8
-    border-bottom: 1px solid #c4dce8
+    border-left: 1px solid var(--pastel-red)
+    border-right: 1px solid var(--pastel-red)
+    border-bottom: 1px solid var(--pastel-red)
+    border-top: 0 !important
     padding: 10px 10px 20px 10px
-    background-color: #fff
+    background-color: white
+    display: block !important
 body .container--login .card--footer .submit-row
-    text-align: center
+    text-align: center !important
 body .container--login .card--footer .submit-row button
     font-size: .9rem
