@@ -1,7 +1,5 @@
 .footer
-    max-width: 71.25rem
     padding: 1.6rem 1rem
-    margin: 0 auto
     border-top: 1px solid var(--border-footer)
     font-weight: 200
     font-size: .8rem
@@ -10,6 +8,14 @@
     &--dumasoft
         display: grid
         grid-template-columns: repeat(5,  1fr)
+        & .copyright
+            color: var(--red-duma)
+        & p
+            font-size: .8rem
+    &--hispt
+        display: grid
+        grid-template-columns: repeat(5,  1fr)
+        background: var(--red-duma)
         & .copyright
             color: var(--red-duma)
         & p
