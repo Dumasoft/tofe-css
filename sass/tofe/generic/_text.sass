@@ -8,3 +8,16 @@
   text-align: justify
 .text-lowercase
     text-transform: lowercase
+
+.divider
+    &--line
+        display: flex
+        align-items: center
+        text-align: center
+        gap: 1rem
+        color: #777
+        &::before, &::after
+            content: ""
+            flex: 1
+            height: 1px
+            background-color: #ddd

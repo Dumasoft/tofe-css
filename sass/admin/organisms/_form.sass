@@ -95,12 +95,22 @@ form .form-row textarea:focus,
 form .form-row select:focus,
 form .form-row .vTextField:focus
     outline: none
-    border: 1px solid #f8485e
+    border: 1px solid #f8485e !important
 form .form-row label
     width: 100% !important
     padding: 0 !important
 form .form-row label.required
     color: #f8485e
+
+
+.related-widget-wrapper
+    overflow: hidden
+    float: left
+    flex-wrap: nowrap
+
+.add-related, .change-related
+    font-size: 1.5rem
+
 input.thin--dumasoft,
 textarea.thin--dumasoft
     color: #373a36
@@ -131,6 +141,39 @@ form fieldset .fieldBox
 .tool-admin
     font-size: 1rem
     margin: 0 5px
+
+
+
+.errornote
+    border: none !important
+    background: var(--red) !important
+    color: white !important
+
+input[type=text]:focus,
+input[type=password]:focus,
+input[type=email]:focus,
+input[type=url]:focus,
+input[type=number]:focus,
+input[type=tel]:focus,
+textarea:focus, select:focus,
+.vTextField:focus
+    border: 1px solid var(--principal-color) !important
+
+.submit--admin
+    display: flex
+    justify-content: flex-end
+    gap: 8px
+    align-items: center
+
+.related-widget-wrapper-link
+    height: 48px
+    width: 48px
+    align-items: center
+    justify-content: center
+    display: flex
+    border-radius: 8px
+    background: var(--background-input)
+    border: 1px solid var(--border) !important
 
 @media(max-width: 1024px)
     form fieldset .fieldBox+.fieldBox

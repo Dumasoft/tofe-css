@@ -2,11 +2,12 @@
 
 
 .btn
-    padding: .4rem 1rem
+    padding: 0 1rem
     border: none
     font-size: variables.$font-size-button
     display: flex
     align-items: center
+    justify-content: center
     &.square
         border-radius: 0
     &.rounded
@@ -53,7 +54,7 @@
             background-color: var(--dark-secondary-color)
             transition: background-color 500ms linear
     &--danger
-        background-color: firebrick
+        background-color: var(--red)
         color: #fff
         transition: background-color 500ms linear
         &:hover, &:focus
@@ -61,11 +62,10 @@
             transition: background-color 500ms linear
     &--book
         border-radius: .5rem
-        font-family: "Nunito Sans", sans-serif
+        font-family: "nunito-bold", sans-serif
         font-optical-sizing: auto
-        font-style: normal
-        font-size: .8rem
-        padding: .6rem 1.5rem
+        font-size: variables.$font-size-button
+        height: 40px
     &--user
         height: 40px
         width: 40px

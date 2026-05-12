@@ -1,48 +1,95 @@
 @use '../settings/variables'
 
 
-.presentation-grid
-    display: grid
-    grid-template-columns: repeat(3, 1fr)
-    grid-column-gap: 25px
-    grid-row-gap: 25px
-    margin: 0 -1px
-    &--item
-        padding: 20px 40px
-        border-radius: 20px
+.presentation-bookriders
+    &.presentation-grid
         display: grid
-        grid-template-columns: 50px 1fr
-        gap: 20px
-        & h1
-            margin: 0 0 5px 0
-            font-weight: 500
-            text-transform: capitalize
-            font-size: 1.6rem
-        & p
-            font-weight: 200
-            line-height: 18px
-            font-size: .8rem
-            margin: 0
-        & svg
-            max-width: 90px
-    &--icon
-        display: flex
-        justify-content: center
-        align-items: center
-        color: #59C2B5
-        font-size: 50px
-    &--description
-        color: white
-        display: flex
-        flex-direction: column
-        justify-content: center
-    &--text
-        padding: 20px
-        & .presentation-grid--title
+        grid-template-columns: repeat(3, 1fr)
+        grid-column-gap: 25px
+        grid-row-gap: 25px
+        margin: 0 -1px
+        &--item
+            padding: 20px 40px
+            border-radius: 20px
+            display: grid
+            grid-template-columns: 50px 1fr
+            gap: 20px
+            & h1
+                margin: 0 0 5px 0
+                font-weight: 500
+                text-transform: capitalize
+                font-size: 1.6rem
+            & p
+                font-weight: 200
+                line-height: 18px
+                font-size: .8rem
+                margin: 0
+            & svg
+                max-width: 90px
+        &--icon
+            display: flex
+            justify-content: center
+            align-items: center
+            color: #59C2B5
+            font-size: 50px
+        &--description
+            color: white
+            display: flex
+            flex-direction: column
+            justify-content: center
+        &--text
+            padding: 20px
+            & .presentation-grid--title
+                font-size: 2.375rem
+            & .presentation-grid--subtitle
+                font-weight: 200
+                font-size: 1.25rem
+
+.presentation-dumasoft
+    margin-bottom: 60px
+    & .presentation-grid
+        display: grid
+        grid-template-columns: repeat(3, 1fr)
+        grid-column-gap: 1px
+        grid-row-gap: 1px
+        margin: 0 -1px
+        background: var(--border-presentation-grid)
+        &--item
+            padding: 20px
+            text-align: center
+            & h1
+                font-size: 2em
+                margin: .67em 0
+                font-family: var(--secondary-font), sans-serif
+            & p
+                font-weight: 200
+                line-height: 25px
+            & svg
+                max-width: 90px
+        &--icon
+            display: flex
+            justify-content: center
+            align-items: center
+            color: #59C2B5
+            font-size: 50px
+        &--description
+            color: white
+            display: flex
+            flex-direction: column
+            justify-content: center
+        &--title
             font-size: 2.375rem
-        & .presentation-grid--subtitle
+            font-family: var(--secondary-font), sans-serif
+        &--subtitle
             font-weight: 200
             font-size: 1.25rem
+        &--text
+            padding: 20px
+            & .presentation-grid--title
+                font-size: 2.375rem
+            & .presentation-grid--subtitle
+                font-weight: 200
+                font-size: 1.25rem
 
 @media screen and (max-width: 61.125rem)
     .presentation-grid

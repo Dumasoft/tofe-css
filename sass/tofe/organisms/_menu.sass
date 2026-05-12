@@ -3,9 +3,26 @@
 
 .menu
     padding: 0 2.5rem
+    &-section
+        list-style: none
+        font-size: 1rem
+        margin-top: 1rem
+        &-title
+            width: 100% !important
+            margin-bottom: .2rem
+            cursor: pointer
+            list-style: none
+            display: flex
+            align-items: center
+            justify-content: space-between
+            &::after
+                font-family: var(--fontawesome-font), sans-serif
+                content: "\f054"
+                transition: transform .2s ease
+                color: var(--principal-color)
     & span
         color: #fff
-        font-family: "nasalization", sans-serif
+        font-family: var(--regular-font), sans-serif
     &--desktop
         display: flex
     & .logo
@@ -20,25 +37,34 @@
         height: 3rem
     &--smarthphone
         display: none
-    &--rojo_duma, &--black
+    &--rojo_duma, &--black, &--transparent
         display: grid
         grid-template-columns: 170px calc(100% - 170px)
         transition: background-color 500ms linear
         & .menspan
             color: #fff
-            font-family: "nasalization", sans-serif
+            font-family: var(--regular-font), sans-serif
         & ul
             margin-left: auto
             & li
                 height: 100%
                 display: flex
-                & a
+                & a, & span
                     display: flex
                     align-items: center
                     padding: 0 10px
+    &--rojo_duma, &--black
+        & ul
+            & li
+                & a, & span
                     color: #fff
-                    & i
-                        font-size: 1rem
+                    font-size: 1.2rem
+    &--transparent
+        & ul
+            & li
+                & a, & span
+                    color: var(--secondary-color)
+                    font-size: 1.5rem
         & .menu--smarthphone
             & i
                 font-size: 1.8rem
@@ -51,6 +77,13 @@
                         color: var(--link-menu-hover)
     &--black
         background-color: var(--menu-dark)
+        & ul
+            & li
+                &:hover
+                    & a
+                        color: var(--principal-color)
+    &--transparent
+        background-color: transparent
         & ul
             & li
                 &:hover
@@ -70,14 +103,14 @@
                     font-size: 1.2rem
 
     &--admin
-        padding: 1.5rem 0
         display: grid
         grid-template-columns: 1fr auto
         align-items: center
+        padding-bottom: 1.2rem
         & .menu--breadcrumb
             justify-self: start
             & span
-                font-family: var(--principal-font)
+                font-family: var(--regular-font), sans-serif
                 font-optical-sizing: auto
                 font-weight: 700
                 font-style: normal
@@ -95,28 +128,30 @@
             grid-template-columns: 1fr 1fr
     &--lateral
         padding: 1rem
-        & a
-            padding: 1rem
         & ul
             padding: 0
             margin: 0
             list-style: none
             & li
-                padding: .8rem
-                margin-bottom: .5rem
-                border-radius: 8px
+                padding: .8rem !important
+                margin-bottom: .2rem !important
+                border-radius: 8px !important
+                list-style: none !important
                 & a
-                    color: #9E989D
+                    color: #9E989D !important
+                    font-size: 1rem
+                    display: block
+                    width: 100%
                     & span
-                        margin-left: .6rem
+                        margin-left: .6rem !important
                 &:hover
-                    background: var(--principal-color)
+                    background: var(--principal-color) !important
                     & a
-                        color: white
+                        color: white !important
                 &.active
-                    background: var(--principal-color)
+                    background: var(--principal-color) !important
                     & a
-                        color: white
+                        color: white !important
 
 
 .menu--movil
@@ -126,6 +161,50 @@
     color: #fff
 .menu--movil ul li:hover a
     color: var(--link-menu-hover)
+
+details[open] .menu-section-title::after
+    transform: rotate(90deg)
+
+
+.context-menu
+    position: absolute
+    top: 40px
+    right: 0
+    display: flex
+    flex-direction: column
+    min-width: 180px
+    padding: 6px
+    background: white
+    border: 1px solid #e5e7eb
+    border-radius: 10px
+    box-shadow: 0 8px 24px rgba(0,0,0,0.08)
+    z-index: 1000
+    & .menu-item
+        display: flex
+        align-items: center
+        gap: 10px
+        width: 100%
+        padding: 10px 12px
+        border: none
+        background: transparent
+        font-size: 14px
+        color: var(--secondary-color)
+        text-align: left
+        border-radius: 8px
+        cursor: pointer
+        transition: background 0.15s ease, color 0.15s ease
+        &:hover
+            background: #f3f4f6
+        &.danger
+            color: #ef4444
+            &:hover
+                background: #fee2e2
+            &.menu-item
+                color: #ef4444
+    &.menu-icon
+        font-size: 16px
+        opacity: 0.8
+
 
 @media screen and (max-width: 47.5rem)
     .menu

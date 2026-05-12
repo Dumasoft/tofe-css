@@ -10,6 +10,7 @@
     max-width: variables.$max-width-container
     padding: variables.$spacing variables.$spacing-s
     margin: 0 auto
+    flex: 1
     &--principal
         display: grid
         grid-template-columns: 280px  calc(100% - 280px)
@@ -54,4 +55,37 @@
             padding: 2rem 3rem
             & svg
                 width: 10rem
+
+.main
+    aside
+        background: white
+        & .logo
+            padding: 2rem 3rem
+            & svg
+                width: 10rem
+
+.content-admin-book
+    background: white !important
+    border-radius: 1rem
+    padding: 1.90rem
+    & .form-row
+        border: none !important
+
+table
+    & th, & td
+        padding: 10px !important
+        font-size: 1rem !important
+        font-weight: normal !important
+
+.flex
+    &--space
+        display: flex
+        justify-content: space-between
+        align-items: center
+
+.grid
+    &--middle-view
+        display: grid
+        grid-template-columns: 1fr 1fr
+        gap: 1rem
 

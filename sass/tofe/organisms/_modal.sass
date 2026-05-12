@@ -2,38 +2,85 @@
 
 
 .modal
-    position: absolute
+    position: fixed
     top: 0
     left: 0
     width: 100%
-    height: 100%
+    height: 100vh
+    display: flex
+    align-items: center
+    justify-content: center
+    background: rgba(0, 0, 0, 0.5)
+    z-index: 1000
     &--general
         margin: 15% auto
         border-radius: variables.$border-button
     &--normal
         width: 50%
+    &--big
+        width: 75%
+        & .modal
+            &--content
+                height: 70vh
+                overflow-y: auto
+                flex: 1
     &--header
         color: white
         border-top-left-radius: variables.$border-button
         border-top-right-radius: variables.$border-button
         display: grid
-        grid-template-columns: calc(100% - 40px) 40px
+        grid-template-columns: calc(100% - 100px) 100px
+        padding: 1rem variables.$padding-modal
+        border-bottom: 1px solid var(--border)
     &--title
-        padding: variables.$padding-modal
         display: flex
         align-items: center
         & h1
             font-size: 1.2rem
             margin: 0
             padding: 0
+    &--options
+        display: flex
+        align-items: center
+        justify-self: center
+        font-size: 28px
+        gap: 8px
+        & a, span
+            color: var(--secondary-color)
+            &:hover
+                color: var(--principal-color)
     &--close
         display: flex
         align-items: center
         justify-content: center
+        font-size: 28px
+        & a
+            color: var(--secondary-color)
+            &:hover
+                color: var(--principal-color)
     &--content
         padding: variables.$padding-modal
+        background-color: var(--principal-color-modal)
+        & input
+            border-radius: 8px
+            padding: .6rem 1rem
+            background: var(--background-input) !important
+            border: 1px solid var(--border) !important
+            font-size: 16px
+            height: 50px
+            width: 100%
+            box-sizing: border-box
+            color: #000 !important
+        & label
+            font-size: 24px
+            color: var(--secondary-color)
+            margin-bottom: .5rem
+            font-family: var(--bold-font), sans-serif
+            &.required
+                color: var(--principal-color)
     &--footer
-        padding: variables.$padding-modal
+        padding: 1rem variables.$padding-modal
+        border-top: 1px solid var(--border)
         color: white
         border-bottom-left-radius: variables.$border-button
         border-bottom-right-radius: variables.$border-button
@@ -46,3 +93,5 @@
                 margin-left: 0
             &:last-child
                 margin-right: 0
+    &--options
+        position: relative

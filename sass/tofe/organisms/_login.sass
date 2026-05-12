@@ -1,70 +1,110 @@
 @font-face
-    font-family: "nasalization"
-    src: url("../fonts/nasalization.ttf")
+    font-family: "nunito-regular"
+    src: url("../fonts/NunitoSans-Regular.ttf")
+
+@font-face
+    font-family: "nunito-bold"
+    src: url("../fonts/NunitoSans-Bold.ttf")
+
 html, body
-    font-family: "Source Sans Pro", sans-serif
+    font-family: var(--regular-font), sans-serif
 h1, h2, h3, h4, h5, h6
-    font-family: "nasalization", sans-serif
+    font-family: var(--bold-font), sans-serif
+
 body
     background-size: cover
-body .container--login
-    display: grid
-    place-items: center
-    min-height: 100vh
-body .container--login .errorlist
-    list-style: none
-    background-color: tomato
-    padding: 10px
-    font-size: 12px
-    color: #fff
-body .container--login .card
-    width: 350px
-    margin: auto
-    display: grid
-    box-sizing: border-box
-body .container--login .card--header
-    background-color: var(--principal-color)
-    padding: 10px
-    height: 25px
-    & i
-        color: white
-body .container--login .card--header svg
-    height: 100%
-body .container--login .card--header svg .simbol--dog
-    fill: #373a36
-body .container--login .card--header svg .simbol--soft
-    fill: #373a36
-body .container--login .card--header svg .simbol--duma
-    fill: #fff
-body .container--login .card--body
-    padding: 10px
-    border-left: 1px solid var(--pastel-red)
-    border-right: 1px solid var(--pastel-red)
-    background-color: #fff
-body .container--login .card--body input
-    width: 100%
-    box-sizing: border-box
-    border: 1px solid var(--border)
-    padding: 5px
-    margin-top: 5px
-    outline: none
-    color: var(--secondary-color)
-    font-weight: 200
-    font-size: .9rem
-    height: 36px
-body .container--login .card--body input:focus
-    border: 1px solid var(--principal-color)
-body .container--login .card--body label
-    font-size: .8rem
-body .container--login .card--footer
-    border-left: 1px solid var(--pastel-red)
-    border-right: 1px solid var(--pastel-red)
-    border-bottom: 1px solid var(--pastel-red)
-    border-top: 0 !important
-    padding: 10px 10px 20px 10px
-    background-color: white
-    display: block !important
-body .container--login .card--footer .submit-row
-    text-align: center !important
-body .container--login .card--footer .submit-row button
-    font-size: .9rem
+body .container
+    &--login
+        display: grid
+        place-items: center
+        &--bookriders
+            & .card
+                font-size: 14px
+                &--header
+                    text-align: center
+                    & svg
+                        width: 4.9rem
+                    h1
+                        font-size: 35px
+                        margin: 30px 0
+                    h2
+                        font-family: var(--regular-font), sans-serif
+                &--body, &--footer
+                    width: 400px
+                    margin: 0 auto
+                &--footer
+                    justify-content: center
+                    align-content: center
+                    flex-direction: column !important
+                    text-align: center
+                    a
+                        color: var(--principal-color)
+                        font-family: var(--bold-font), sans-serif
+                        text-decoration: underline !important
+                        text-underline-offset: 4px
+        &--hispt, &--dumasoft
+            min-height: 100vh
+            & .card
+                &--body
+                    background-color: white
+                    padding: 10px
+                    border-left: 1px solid var(--secondary-color)
+                    border-right: 1px solid var(--secondary-color)
+                &--header
+                    background-color: var(--principal-color)
+                    padding: 10px
+                    & i
+                        color: white
+                    & svg
+                        height: 15px
+                        & .simbol--dog
+                            fill: #373a36
+                        & .simbol--soft
+                            fill: #373a36
+                        & .simbol--duma
+                            fill: white
+                &--footer
+                    border-left: 1px solid var(--secondary-color)
+                    border-right: 1px solid var(--secondary-color)
+                    border-bottom: 1px solid var(--secondary-color)
+                    padding: 10px 10px 20px 10px
+                    background-color: white
+        & .errorlist
+            list-style: none
+            background-color: tomato
+            padding: 10px
+            font-size: 12px
+            color: white
+        & .card
+            margin: auto
+            display: grid
+            box-sizing: border-box
+        & .card--body
+            & input
+                width: 100%
+                box-sizing: border-box
+                border: 1px solid var(--text-breadcrumb)
+                margin-top: 5px
+                outline: none
+                color: var(--secondary-color)
+                font-weight: 200
+                font-size: 14px
+                height: 40px
+                border-radius: 8px
+                padding: 5px 10px
+                font-family: var(--regular-font), sans-serif
+                &:focus
+                    border: 1px solid var(--principal-color)
+            & label
+                font-size: 1.05rem
+                font-weight: 700
+                font-family: var(--bold-font), sans-serif
+        & .card--footer
+            & .submit-row
+                align-content: center
+                justify-content: center
+                display: flex
+                margin-top: 14px
+                & button
+                    width: 100%
+

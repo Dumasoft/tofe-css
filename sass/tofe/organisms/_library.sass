@@ -1,4 +1,17 @@
 .library
+    &--content
+        background: none !important
+        & h1
+            color: var(--secondary-color)
+            padding: 0
+            margin: 0 0 .625rem 0
+        & h2
+            color: var(--text-breadcrumb)
+            padding: 0
+            margin: 0 0 1rem 0
+        & p
+            padding: 0
+            margin: 0 0 1rem 0
     &--grid
         display: grid
         grid-template-columns: repeat(auto-fit, 12.5rem)
@@ -6,6 +19,7 @@
     &--header
         display: grid
         grid-template-columns: repeat(2, 1fr)
+        margin: 1rem 0
     &--add
         margin-left: auto
         margin-right: 0
@@ -33,12 +47,15 @@
             object-fit: cover
             overflow: hidden
 
+
 .book--center
     justify-content: center
     align-items: center
+.content-admin-book
+    & .close-edit
+        margin-top: 10px
 
 .rating-date
-    margin-top: 1rem
     display: grid
     grid-template-columns: 1fr 1fr
 
@@ -46,3 +63,59 @@
     text-align: right
     color: #59C2B5
 
+
+
+.book-field
+    [type=checkbox]:not(:checked)+label,
+    [type=checkbox]:checked+label
+        display: flex
+        align-items: center
+        position: relative
+        padding-left: 3.2em !important
+        font-size: 1.05em
+        line-height: 1.7
+    [type=checkbox]:not(:checked)+label:before,
+    [type=checkbox]:checked+label:before
+        content: ""
+        position: absolute
+        left: 0
+        top: 50%
+        transform: translateY(-50%)
+        width: 48px
+        height: 48px
+        border: 1px solid var(--border)
+        -webkit-transition: all .275s
+        transition: all .275s
+        border-radius: 8px
+        background: var(--background-input)
+    [type=checkbox]:not(:checked)+label:after,
+    [type=checkbox]:checked+label:after
+        top: 50%
+        transform: translateY(-50%) scale(1)
+        font-family: var(--fontawesome-font), sans-serif
+        content: "\f00c"
+        position: absolute
+        left: .5em
+        font-size: 28px
+        color: var(--principal-color)
+        font-weight: bold
+        line-height: 0
+        transition: all .2s
+    [type=checkbox]:not(:checked)+label:after
+        opacity: 0
+        transform: translateY(-50%) scale(0) rotate(45deg)
+    [type=checkbox]:checked+label:after
+        opacity: 1
+        transform: scale(1) rotate(0)
+    [type=checkbox]:disabled:not(:checked)+label:before,
+    [type=checkbox]:disabled:checked+label:before
+        box-shadow: none
+        border-color: #bbb
+        background-color: #e9e9e9
+    [type=checkbox]:disabled:checked+label:after
+        color: #777
+    [type=checkbox]:disabled+label
+        color: #aaa
+    [type=checkbox]:checked:focus+label:before,
+    [type=checkbox]:not(:checked):focus+label:before
+        border: 1px solid #4889ff
