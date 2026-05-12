@@ -1,5 +1,9 @@
 # Changelog
 
+## [1.0.0] 2026-12-05
+### Added:
+* Elements designed by Vacamorta for the landing.
+
 ## [0.1.4] 2025-09-02
 ### Added:
 * Elements designed by Vacamorta for the landing.
