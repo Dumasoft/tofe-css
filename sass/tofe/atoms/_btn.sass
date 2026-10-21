@@ -8,6 +8,8 @@
     display: flex
     align-items: center
     justify-content: center
+    &.full
+        width: 100%
     &.square
         border-radius: 0
     &.rounded
@@ -38,7 +40,7 @@
     &--primary
         background-color: var(--principal-color)
         transition: background-color 500ms linear
-        color: #fff
+        color: white
         &.btn--book
             font-weight: 700
         &:hover, &:focus
@@ -46,7 +48,7 @@
             transition: background-color 500ms linear
     &--secondary
         background-color: var(--secondary-color)
-        color: #fff
+        color: white
         transition: background-color 500ms linear
         &.btn--book
             font-weight: 400
@@ -55,7 +57,21 @@
             transition: background-color 500ms linear
     &--danger
         background-color: var(--red)
-        color: #fff
+        color: white
+        transition: background-color 500ms linear
+        &:hover, &:focus
+            background-color: darkred
+            transition: background-color 500ms linear
+    &--gray
+        background-color: var(--gray-button)
+        color: white
+        transition: background-color 500ms linear
+        &:hover, &:focus
+            background-color: darkred
+            transition: background-color 500ms linear
+    &--blue
+        background-color: var(--blue-button)
+        color: white
         transition: background-color 500ms linear
         &:hover, &:focus
             background-color: darkred

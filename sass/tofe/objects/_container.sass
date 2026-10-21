@@ -8,9 +8,13 @@
         background-color: var(--pastel-blue)
 .o-container
     max-width: variables.$max-width-container
+    width: 100%
     padding: variables.$spacing variables.$spacing-s
     margin: 0 auto
+    box-sizing: border-box
     flex: 1
+    & svg
+        width: 100%
     &--principal
         display: grid
         grid-template-columns: 280px  calc(100% - 280px)

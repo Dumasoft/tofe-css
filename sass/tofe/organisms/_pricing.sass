@@ -1,0 +1,73 @@
+.pricing
+    display: grid
+    grid-template-columns: 1fr 1fr 1fr
+    gap: 30px
+    padding: 60px 0
+    &--badge
+        position: absolute
+        top: 0
+        left: 50%
+        transform: translate(-50%, -50%)
+        display: inline-flex
+        align-items: center
+        gap: 8px
+        padding: 8px 18px
+        border-radius: 8px
+        background: #F2DC9B
+        color: white
+        font-size: 12px
+        font-weight: 700
+        text-transform: uppercase
+        letter-spacing: 0.05em
+        white-space: nowrap
+        & i
+            font-size: 14px
+    &--card
+        position: relative
+        border-radius: 24px
+        border: 1px solid #D9D9D9
+        padding: 30px
+        background: white
+        min-height: 400px
+        & h1
+            font-size: 24px
+        & p
+            font-size: 1rem
+            color: #9E989D
+            & b
+                color: black
+        & ul
+            list-style: none
+            padding: 0
+            margin: 0
+            & li
+                position: relative
+                padding-left: 28px
+                margin-bottom: 12px
+                line-height: 1.5
+                &::before
+                    content: ""
+                    position: absolute
+                    left: 0
+                    top: 0.35em
+                    width: 16px
+                    height: 16px
+                    background-color: currentColor
+                    -webkit-mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='black' stroke-width='3' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='4 12 9 17 20 6'/%3E%3C/svg%3E") no-repeat center / contain
+                    mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='black' stroke-width='3' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='4 12 9 17 20 6'/%3E%3C/svg%3E") no-repeat center / contain
+
+    &--basic
+        & .pricing--icon
+            color: #9E989D
+    &--plus
+        & .pricing--icon
+            color: #349BE8
+    &--unlimited
+        & .pricing--icon
+            color: #59C2B5
+    &--icon
+        font-size: 32px
+
+@media screen and (max-width: 48rem)
+    .pricing
+        grid-template-columns: 1fr
